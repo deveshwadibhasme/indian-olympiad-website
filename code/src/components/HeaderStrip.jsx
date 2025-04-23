@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Logo from '../assets/logo.png';
 
 const HeaderStrip = () => {
   const [show, setShow] = useState(true);
