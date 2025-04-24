@@ -1,0 +1,1 @@
+import{j as e}from"./index-LqFr9P42.js";const s="/assets/sample-ios-VQg0qWKe.mp4",o=()=>e.jsx("section",{className:"w-full mx-auto bg-white",children:e.jsx("video",{autoPlay:!0,loop:!0,muted:!0,className:" lg:w-full h-auto",children:e.jsx("source",{src:s,type:"video/mp4"})})});export{o as default};
