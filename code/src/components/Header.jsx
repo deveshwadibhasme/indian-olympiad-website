@@ -28,8 +28,8 @@ const Header = () => {
       initial={{ height: "100px" }}
     >
       <HeaderStrip />
-      <div className="flex max-w-screen-xl w-full bg-white mx-auto items-center gap-30 px-4 py-2">
-        <img src={Logo} alt="" className="h-full" />
+      <div className="flex w-full bg-white mx-auto items-center justify-between md:justify-normal gap-30 px-4 py-2">
+        <img src={Logo} alt="" className="h-20" />
         <HeaderNav />
       </div>
     </motion.header>

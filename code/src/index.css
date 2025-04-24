@@ -2,6 +2,7 @@
 
 @layer base {
 
+
   #root{
     @apply w-full flex flex-col items-center h-screen bg-gray-100;
   }

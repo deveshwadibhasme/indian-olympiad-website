@@ -58,5 +58,53 @@ export default [
                 path: '/faq'
             },
         ]
-    }
+    },
+    {
+        title: 'Admissions',
+        path: '/',
+        dropDown:[
+            {
+                title: 'Enquiry Form',
+                path: '/enquiry-form'
+            },
+            {
+                title: `Online Registration`,
+                path: '/online-registration'
+            },
+            {
+                title: `Admission Guidelines`,
+                path: '/admission-guidelines'
+            },
+        ]
+    },
+    {
+        title: 'Achievements',
+        path: '/',
+        dropDown:[
+            {
+                title: 'School Toppers',
+                path: '/toppers'
+            },
+            {
+                title: `School Alumni`,
+                path: '/alumni'
+            },
+            {
+                title: `School Achievers`,
+                path: '/achievers'
+            },
+        ]
+    },
+    {
+        title:'CBSE Info',
+        path: '/cbse',
+    },
+    {
+        title:'Carrer',
+        path: '/carrer',
+    },
+    {
+        title:'Contact Us',
+        path: '/contact-us',
+    },
 ]
