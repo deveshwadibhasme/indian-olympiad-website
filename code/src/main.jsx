@@ -1,14 +1,16 @@
+import React from 'react';
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import "./index.css";
 import App from "./App.jsx";
-import HomePage from "./pages/HomePage.jsx";
+const HomePage = React.lazy(() => import('./pages/HomePage.jsx'));
+const Error = React.lazy(() => import('./components/Error.jsx'));
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // errorElement: <Error/>,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
