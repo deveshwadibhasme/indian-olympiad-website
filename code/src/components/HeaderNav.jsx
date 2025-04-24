@@ -1,46 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import NavigationData from "../data/navigations";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const HeaderNav = () => {
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const handleMouseArrive = (e) => {
-    const target = e.target;
-    const dropdown = target.parentNode.parentNode.childNodes[1];
-    if (dropdown) {
-      dropdown.style.display = "block";
-    }
+  const handleMouseEnter = (index) => {
+    setActiveDropdown(index);
   };
-  const handleMouseExit = (e) => {
-    const target = e.target.parentNode.querySelector("#dropDown");
-    if (target) {
-      target.style.display = "none";
-    }
+
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
   };
 
   return (
     <div className="max-w-screen-lg flex items-center gap-14">
       {NavigationData.map((item, index) => {
         return (
-          <div id="navItems" className="relative" key={index}>
+          <div
+            id="navItems"
+            className="relative"
+            key={index}
+            onMouseEnter={() => handleMouseEnter(index)}
+            // onMouseLeave={handleMouseLeave}
+          >
             <Link
               to={item.path}
-              key={index}
-              className="text-black text-lg font-semibold  cursor-pointer"
+              className="text-black text-lg font-semibold cursor-pointer"
             >
-              <span
-                onMouseEnter={(e) => handleMouseArrive(e)}
-                className="hover:text-orange-300 peer"
-              >
-                {item.title}
-              </span>
+              <span className="hover:text-orange-300 peer">{item.title}</span>
             </Link>
-            {item.dropDown && (
-              <div
-              id="dropDown"
-                onMouseLeave={(e) => handleMouseExit(e)}
-                style={{ display: "none" }}
+            {item.dropDown && activeDropdown === index && (
+              <motion.div
+                id="dropDown"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
                 className="absolute w-50 top-15 left-0 bg-white shadow-lg rounded-md p-2 flex flex-col gap-5"
+                onMouseEnter={() => handleMouseEnter(index)} // Keep dropdown open
+                onMouseLeave={handleMouseLeave} // Close dropdown when leaving
               >
                 {item.dropDown.map((subItem, subIndex) => {
                   return (
@@ -53,7 +52,7 @@ const HeaderNav = () => {
                     </Link>
                   );
                 })}
-              </div>
+              </motion.div>
             )}
           </div>
         );
