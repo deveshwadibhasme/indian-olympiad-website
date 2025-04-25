@@ -1,18 +1,47 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const WelcomePage = () => {
-  return (
-    <div className="w-full min-h-96 relative flex items-center justify-center bg-white">
-      <div className="max-w-screen text-center w-full hori-strip">
-        <h1 className="text-3xl md:text-4xl font-semibold mb-4 text-amber-500">
-          Welcome to Indian Olympiad School!
-        </h1>
-        <p className="text-blue-700 text-4xl md:text-5xl font-semibold md:font-bold mb-6">
-          An Outstanding Curriculum and IB School in Nagpur.
-        </p>
-      </div>
-    </div>
-  );
+    return (
+        <div className="w-full min-h-120 relative flex items-center justify-center bg-white pt-10">
+            <motion.div
+                className="max-w-screen text-center w-full hori-strip"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+            >
+                <motion.h1
+                    className="text-3xl md:text-4xl font-semibold mb-4 text-amber-500"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    Welcome to Indian Olympiad School!
+                </motion.h1>
+                <motion.h3
+                    className="text-blue-700 text-4xl md:text-5xl max-w-screen-md mx-auto font-semibold md:font-bold"
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                >
+                    An Outstanding Curriculum and IB School in Nagpur.
+                </motion.h3>
+                <motion.p
+                    className="mt-20"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2 }}
+                >
+                    GEMS Wellington International School is a truly ground-breaking
+                    learning environment that provides exceptionally high standards of
+                    education to all the students. The school, spanning an area of eight
+                    acres, offers a spectrum of facilities and resources that combines a
+                    world class education with distinctive, state-of-the-art
+                    infrastructure.
+                </motion.p>
+            </motion.div>
+        </div>
+    );
 };
 
 export default WelcomePage;

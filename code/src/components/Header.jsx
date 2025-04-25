@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="max-w-screen w-full mx-auto bg-white shadow-md sticky top-0 z-50"
+      className="max-w-screen w-full mx-auto bg-white shadow-md fixed top-0 z-50"
       animate={controls}
       initial={{ height: "100px" }}
     >
