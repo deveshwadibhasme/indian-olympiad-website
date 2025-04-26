@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 
 const WelcomePage = () => {
     return (
-        <div className="w-full min-h-120 relative flex items-center justify-center bg-white pt-10">
+        <div className="w-full min-h-140 relative flex items-center justify-center bg-white pt-10">
             <motion.div
-                className="max-w-screen text-center w-full hori-strip"
+                className="max-w-screen text-center w-full hori-strip mt-20"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
                 <motion.h1
-                    className="text-3xl md:text-4xl font-semibold mb-4 text-amber-500"
+                    className="text-3xl md:text-4xl font-semibold text-amber-500"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
