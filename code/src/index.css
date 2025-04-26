@@ -2,6 +2,9 @@
 
 @layer base {
 
+  /* *{
+    border: 1px solid #c93600;
+  } */
 
   #root{
     font-family: 'Work Sans', sans-serif;
@@ -44,6 +47,18 @@
       bottom: 200px;
       left: 50%;
     }
+  }
+
+  .angled-corner::after{
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: -1px;
+    height: 40px;
+    width: 35px;
+    background-color: #c93600;
+    clip-path: polygon(49% 51%, 0% 100%, 100% 100%);
+    z-index: 1;
   }
 
   .active-right::after {

@@ -19,7 +19,7 @@ const ContactPage = () => {
             <button className={`flex-center z-10 relative w-[50%] text-xl font-semibold rouded-xl ${
                 !dirChange ? "text-white" : "text-black"
               }`}>
-             Bhilgao
+             Bhilgaon
             </button>
             <button className={`flex-center z-10 relative w-[50%] text-xl font-semibold rouded-xl ${
                 !dirChange ? "text-black" : "text-white"

@@ -50,7 +50,7 @@ const HeaderNav = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute w-50 top-15 left-0 bg-white shadow-lg rounded-md p-2 flex flex-col gap-5 overflow-x-hidden"
+                className="absolute w-50 top-15 left-0 bg-orange-700 shadow-lg rounded-md p-2 flex flex-col gap-5  angled-corner"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
@@ -59,7 +59,7 @@ const HeaderNav = () => {
                     <Link
                       to={subItem.path}
                       key={subIndex}
-                      className="group block w-full ml-2 text-sm relative text-black py-1 px-2"
+                      className="group block w-full ml-2 text-sm relative text-white py-1 px-2 "
                     >
                       <FontAwesomeIcon
                         icon={faArrowRight}

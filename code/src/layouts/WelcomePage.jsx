@@ -24,15 +24,15 @@ const WelcomePage = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    An Outstanding Curriculum and IB School in Nagpur.
+                    An Outstanding Curriculum and CBSE School in Nagpur.
                 </motion.h3>
                 <motion.p
-                    className="mt-20"
+                    className="mt-24 max-w-280 w-full mx-auto text-gray-700 text-lg md:text-xl leading-relaxed"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2 }}
                 >
-                    GEMS Wellington International School is a truly ground-breaking
+                    Indian Olympiad School is a truly ground-breaking
                     learning environment that provides exceptionally high standards of
                     education to all the students. The school, spanning an area of eight
                     acres, offers a spectrum of facilities and resources that combines a

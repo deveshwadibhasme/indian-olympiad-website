@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import introVideo from "../assets/sample-ios.mp4";
 import WelcomePage from "../layouts/WelcomePage";
+import Branches from "../layouts/Branches";
 
 const HomePage = () => {
   return (
@@ -20,7 +21,7 @@ const HomePage = () => {
           We Enter to Learn Leave to Achieve
         </motion.div>
         <motion.div
-          className="absolute top-30 md:top-70 left-2 md:left-15 z-10"
+          className="absolute top-30 md:top-70 2xl:top-90 left-2 md:left-15 z-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -33,6 +34,7 @@ const HomePage = () => {
         </motion.div>
       </section>
       <WelcomePage />
+      <Branches/>
     </>
   );
 };
