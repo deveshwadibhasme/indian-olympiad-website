@@ -6,6 +6,7 @@ import App from "./App.jsx";
 const HomePage = React.lazy(() => import('./pages/HomePage.jsx'));
 const Error = React.lazy(() => import('./components/Error.jsx'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage.jsx'));
+const AboutPage = React.lazy(() => import('./pages/AboutUs.jsx'));
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/contact-us",
         element: <ContactPage />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutPage />,
       }
     ],
   },

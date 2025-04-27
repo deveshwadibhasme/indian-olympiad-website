@@ -8,7 +8,7 @@
 
   #root{
     font-family: 'Work Sans', sans-serif;
-    @apply w-full flex flex-col items-center h-screen bg-gray-100 pt-25;
+    @apply w-full flex flex-col gap-0 min-h-screen items-center pt-25;
   }
 
   .partition-line::after {
@@ -56,6 +56,7 @@
     left: -1px;
     height: 40px;
     width: 35px;
+    border-bottom-left-radius: 6px ;
     background-color: #c93600;
     clip-path: polygon(49% 51%, 0% 100%, 100% 100%);
     z-index: 1;

@@ -6,7 +6,7 @@ const Branches = () => {
   return (
     <section
       id="branches"
-      className="w-full max-w-screen-xl flex flex-col gap-x-10 m-20 min-h-120 mx-auto bg-white relative"
+      className="w-full max-w-screen flex flex-col h-96 gap-x-10 mx-auto bg-white relative"
     >
       <h1 className="text-3xl mt-10 md:mt-2 md:text-6xl mb-10 text-blue-600 text-center font-bold">Our Branches</h1>
       <div className="flex justify-evenly items-center w-full gap-0 flex-row">

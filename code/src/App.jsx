@@ -2,6 +2,7 @@ import { useState , Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import LoadingPage from "./pages/LoadingPage";
+import Footer from "./components/Footer";
 
 function App() {
   
@@ -10,6 +11,7 @@ function App() {
     <Suspense fallback={<LoadingPage/>}>
       <Header />
       <Outlet />
+      <Footer/>
     </Suspense>
   );
 }
