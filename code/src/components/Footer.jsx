@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#003366] text-white max-w-screen w-full h-full min-h-96 pt-5">
-      <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-8">
+    <footer className="bg-[#003366] text-white max-w-screen w-full h-full min-h-120 pt-5">
+      <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center gap-8">
         {/* Logo and Address */}
         <div className="flex-1 min-w-[250px]">
           <img src={Logo} alt="School Logo" className="h-16 mb-4" />
