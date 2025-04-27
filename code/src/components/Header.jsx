@@ -1,38 +1,37 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useScroll } from "framer-motion";
-import Logo from '../assets/logo.png';
+import React, { useEffect, useState } from "react";
+import Logo from "../assets/logo.png";
 import HeaderStrip from "./HeaderStrip";
 import HeaderNav from "./HeaderNav";
+import MobileNav from "../layouts/MobileNav";
 
 const Header = () => {
-  const controls = useAnimation();
-  const { scrollY } = useScroll();
+  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const unsubscribe = scrollY.on("change", (latest) => {
-      if (latest > 10) {
-        controls.start({ height: "60px" });
-      } else {
-        controls.start({ height: "100px" });
-      }
-    });
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth <= 1024) {
+  //       setIsMobile(true);
+  //     }
+  //   };
 
-    return () => unsubscribe();
-  }, [scrollY, controls]);
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
+
+
 
   return (
-    <motion.header
-      className="max-w-screen w-full mx-auto bg-white shadow-md fixed top-0 z-50"
-      animate={controls}
-      initial={{ height: "100px" }}
-    >
+    <header className="max-w-screen w-full mx-auto bg-white shadow-md fixed top-0 z-50">
       <HeaderStrip />
-      <div className="flex w-full bg-white mx-auto items-center justify-between px-4 py-2">
+      <div className="flex w-full bg-white mx-auto items-center relative justify-between px-4 py-2">
         <img src={Logo} alt="" className="h-20" />
-        <HeaderNav />
+        <MobileNav isMobile={isMobile} setIsMobile={setIsMobile}  />
+        <HeaderNav setIsMobile={setIsMobile}  />
       </div>
-    </motion.header>
+    </header>
   );
 };
 

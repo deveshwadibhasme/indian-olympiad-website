@@ -4,13 +4,22 @@ import {
   faBars,
   faArrowRight,
   faCaretDown,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import NavigationData from "../data/navigations";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const HeaderNav = () => {
+const HeaderNav = ({setIsMobile}) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [icon,setIcon] = useState(false);
+
+  const ico = icon ? faXmark : faBars; 
+
+  const handleMenu = () => {
+    setIsMobile((prev) => !prev);
+    setIcon(!icon);
+  };
 
   const handleMouseEnter = (index) => {
     setActiveDropdown(index);
@@ -28,7 +37,7 @@ const HeaderNav = () => {
           initial={{ opacity: 0, x: -23 }}
           animate={{ opacity: 1, x: 0 }}
             id="navItems"
-            className="relative hidden md:flex"
+            className="relative hidden lg:flex"
             key={index}
             onMouseEnter={() => handleMouseEnter(index)}
             // onMouseLeave={handleMouseLeave}
@@ -74,8 +83,8 @@ const HeaderNav = () => {
           </motion.div>
         );
       })}
-      <div className="block md:hidden cursor-pointer bg-orange-500 p-3 rounded-4xl">
-        <FontAwesomeIcon icon={faBars} className="text-white text-2xl" />
+      <div onClick={handleMenu} className="block lg:hidden cursor-pointer p-3 rounded-4xl">
+        <FontAwesomeIcon icon={ico} className="text-black text-2xl" />
       </div>
     </div>
   );

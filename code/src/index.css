@@ -8,7 +8,7 @@
 
   #root{
     font-family: 'Work Sans', sans-serif;
-    @apply w-full flex flex-col gap-0 min-h-screen items-center pt-25;
+    @apply w-full flex flex-col gap-0 min-h-screen max-w-screen pt-25;
   }
 
   .partition-line::after {
@@ -35,19 +35,20 @@
   .hori-strip::after{
     content: '';
     position: absolute;
-    bottom: 150px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     height: 2px;
     width: 100px;
     background-color: blue;
   }
-  @media (max-width:800px) {
+
+  /* @media (max-width:800px) {
     .hori-strip::after{
       bottom: 200px;
       left: 50%;
     }
-  }
+  } */
 
   .angled-corner::after{
     content: '';

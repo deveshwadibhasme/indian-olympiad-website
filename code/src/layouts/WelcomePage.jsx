@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const WelcomePage = () => {
     return (
-        <div className="w-full min-h-140 relative flex items-center justify-center bg-white pt-10">
+        <div className="w-full min-h-140 flex items-center justify-center bg-white pt-10">
             <motion.div
-                className="max-w-screen text-center w-full hori-strip mt-20"
+                className="max-w-screen text-center w-full mt-20"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
@@ -19,7 +19,7 @@ const WelcomePage = () => {
                     Welcome to Indian Olympiad School!
                 </motion.h1>
                 <motion.h3
-                    className="text-blue-700 text-4xl md:text-5xl max-w-screen-md mx-auto font-semibold md:font-bold"
+                    className="text-blue-700 text-4xl relative hori-strip md:text-5xl max-w-screen-md mx-auto font-semibold md:font-bold"
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
@@ -27,7 +27,7 @@ const WelcomePage = () => {
                     An Outstanding Curriculum and CBSE School in Nagpur.
                 </motion.h3>
                 <motion.p
-                    className="mt-24 max-w-280 w-full mx-auto text-gray-700 text-lg md:text-xl leading-relaxed"
+                    className="mt-24 max-w-280 w-full  mx-auto text-gray-700 text-lg md:text-xl leading-relaxed"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2 }}
