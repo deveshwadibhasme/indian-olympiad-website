@@ -9,15 +9,18 @@ import NavigationData from "../data/navigations";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-const MobileNav = ({ isMobile , setIsMobile}) => {
+const MobileNav = ({ isMobile , setIsMobile , setIcon}) => {
     const [activeDropdown, setActiveDropdown] = useState(null);
 
     const handleMouseClick = (index) => {
         setActiveDropdown((prev) => (prev === index ? null : index));
     };
 
-    const handleMouseLeave = () => {
-        setActiveDropdown(null);
+    const handleMouseLeave = (path) => {
+        if(path.includes("/")){ 
+            setIsMobile(false);
+            setIcon(false);
+        }
     };
 
     return (
@@ -46,6 +49,7 @@ const MobileNav = ({ isMobile , setIsMobile}) => {
                             >
                                 <Link
                                     to={item.path}
+                                    onClick={()=>handleMouseLeave(item.path)}
                                     className="text-black transition-all text-sm uppercase font-semibold cursor-pointer text-center"
                                 >
                                     <span className="hover:text-orange-500 peer text-center">
@@ -61,10 +65,11 @@ const MobileNav = ({ isMobile , setIsMobile}) => {
                                                 initial={{ opacity: 0, y: -10 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 exit={{ opacity: 0, y: -10 }}                        
-                                                transition={{ duration: 0.2, delay: subIndex * 0.05 }}
+                                                transition={{ duration: 0.2, delay: subIndex * 0.05 }}                          
                                             >
                                                 <Link
                                                     to={subItem?.path}
+                                                    onClick={()=>handleMouseLeave(subItem.path)}
                                                     className="group transition-all block w-full ml-2 mb-1 text-sm rounded-2xl relative text-white py-2 bg-orange-700 px-2"
                                                 >
                                                     <FontAwesomeIcon

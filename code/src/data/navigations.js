@@ -5,7 +5,7 @@ export default [
     },
     {
         title: 'About Us',
-        path: '/',
+        path: '#',
         dropDown: [
             {
                 title: 'About Us',
@@ -31,7 +31,7 @@ export default [
     },
     {
         title: 'Info Corner',
-        path: '/',
+        path: '#',
         dropDown: [
             {
                 title: 'Fee Structure',
@@ -61,7 +61,7 @@ export default [
     },
     {
         title: 'Admissions',
-        path: '/',
+        path: '#',
         dropDown:[
             {
                 title: 'Enquiry Form',
@@ -79,7 +79,7 @@ export default [
     },
     {
         title: 'Achievements',
-        path: '/',
+        path: '#',
         dropDown:[
             {
                 title: 'School Toppers',

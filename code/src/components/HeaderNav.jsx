@@ -10,9 +10,9 @@ import NavigationData from "../data/navigations";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const HeaderNav = ({setIsMobile}) => {
+const HeaderNav = ({setIsMobile,icon,setIcon}) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [icon,setIcon] = useState(false);
+ 
 
   const ico = icon ? faXmark : faBars; 
 
@@ -37,14 +37,14 @@ const HeaderNav = ({setIsMobile}) => {
           initial={{ opacity: 0, x: -23 }}
           animate={{ opacity: 1, x: 0 }}
             id="navItems"
-            className="relative hidden lg:flex"
+            className="relative py-7 h-full hidden lg:flex"
             key={index}
             onMouseEnter={() => handleMouseEnter(index)}
-            // onMouseLeave={handleMouseLeave}
+            onMouseLeave={handleMouseLeave}
           >
             <Link
               to={item.path}
-              className="text-black text-sm uppercase font-semibold cursor-pointer"
+              className="text-black self-start text-sm uppercase font-semibold cursor-pointer"
             >
               <span
                 className="hover:text-orange-500 peer"
@@ -54,12 +54,12 @@ const HeaderNav = ({setIsMobile}) => {
               </span>
             </Link>
             {item.dropDown && activeDropdown === index && (
-              <motion.div
+              <motion.div   
                 id="dropDown"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute w-50 top-15 left-0 bg-orange-700 shadow-lg rounded-md p-2 flex flex-col gap-5  angled-corner"
+                className="absolute w-50 top-18 left-0 bg-orange-700 shadow-lg rounded-md p-2 flex flex-col gap-5  angled-corner"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >

@@ -6,21 +6,7 @@ import MobileNav from "../layouts/MobileNav";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth <= 1024) {
-  //       setIsMobile(true);
-  //     }
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
+   const [icon,setIcon] = useState(false);
 
 
   return (
@@ -28,8 +14,8 @@ const Header = () => {
       <HeaderStrip />
       <div className="flex w-full bg-white mx-auto items-center relative justify-between px-4 py-2">
         <img src={Logo} alt="" className="h-20" />
-        <MobileNav isMobile={isMobile} setIsMobile={setIsMobile}  />
-        <HeaderNav setIsMobile={setIsMobile}  />
+        <MobileNav isMobile={isMobile} setIsMobile={setIsMobile} setIcon={setIcon}  />
+        <HeaderNav setIsMobile={setIsMobile} icon={icon} setIcon={setIcon}  />
       </div>
     </header>
   );
