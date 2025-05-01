@@ -16,7 +16,7 @@ const AboutUs = () => {
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-2xl md:mt-2 md:text-4xl text-blue-600 text-center font-bold"
+        className="text-2xl md:mt-2 relative hori-strip after:top-15 md:text-4xl text-blue-600 text-center font-bold"
       >
         ABOUT US | IOS
       </motion.h1>

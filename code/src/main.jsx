@@ -8,6 +8,8 @@ const Error = React.lazy(() => import('./components/Error.jsx'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage.jsx'));
 const AboutPage = React.lazy(() => import('./pages/AboutUs.jsx'));
 const InfrastructurePage = React.lazy(() => import('./pages/Infrastructure.jsx'));
+const LabsPage = React.lazy(() => import('./pages/LabsPage.jsx'));
+const FeesStructurePage = React.lazy(() => import('./pages/FeesStructure.jsx'));
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/infrastructure",
         element: <InfrastructurePage />,
+      },
+      {
+        path: "/labs",
+        element: <LabsPage />,
+      },
+      {
+        path: "/fee-structure",
+        element: <FeesStructurePage />,
       }
     ],
   },

@@ -4,11 +4,11 @@ import InfrastructureDetails from "../data/infrastructure.js";
 
 const Infrastructure = () => {
   return (
-    <section className="w-full flex-center min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-auto bg-slate-50">
-      <h1 className="text-2xl md:mt-2 md:text-4xl text-blue-600 text-center font-bold">
+    <section className="w-full flex-center min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-autobg-slate-50">
+      <h1 className="text-2xl md:mt-2 md:text-5xl relative hori-strip after:top-14 text-blue-600 text-center font-bold">
         School Infrastructure
       </h1>
-      <p className="max-w-screen-lg text-center mx-auto mt-1">
+      <p className="max-w-screen-lg text-center mx-auto mt-4">
         As per information furnished in CBSE Affiliation No. 1130804, and Letter
         No. CBSE/AFF//SS-00224-00224-2021/2020-21 dated 16/12/2020, School
         Infrastructure details are as follows.
