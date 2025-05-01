@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
       </div> 
       <div className="text-center text-sm mt-10 border-t border-white pt-4">
-        © {'2024'} — Design by Trivo. All Rights Reserved.
+        © {new Date().getFullYear()} — Design by Anicomic. All Rights Reserved.
       </div>
     </footer>
   )

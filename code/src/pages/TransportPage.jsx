@@ -8,8 +8,14 @@ const TransportPage = () => {
     setcurrentIndex(index + 1);
   };
 
+  const handleIndexZero = (e) => {
+    e.stopPropagation();
+    if (currentIndex === 0) return;
+    setcurrentIndex(0);
+  }
+
   return (
-    <section className="w-full flex-center min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-auto bg-slate-50">
+    <section onClick={handleIndexZero} className="w-full flex-center min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-auto bg-slate-50">
       <h1 className="text-2xl md:mt-5 md:text-5xl relative hori-strip after:top-10 md:after:top-14 text-blue-600 text-center font-bold">
         Route Wise Transport
       </h1>
