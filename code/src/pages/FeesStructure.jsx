@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import { selectedClass } from "../data/fees-structure";
+import { motion } from "framer-motion";
 
 const FeesStructure = () => {
   const [feesInfo, setFeesInfo] = useState(null);
 
   const userSelect = (e) => {
     const selectedClassData = selectedClass(e.target.value);
+    setFeesInfo(null);
+    setTimeout(() => {
     setFeesInfo(selectedClassData);
+    }
+    , 100);
   };
 
   return (
     <section className="w-full flex-center min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-autobg-slate-50">
-      <h1 className="text-2xl md:mt-2 md:text-5xl relative hori-strip after:top-14 text-blue-600 text-center font-bold">
+      <h1 className="text-2xl md:mt-2 md:text-5xl relative hori-strip after:top-10 md:after:top-14 text-blue-600 text-center font-bold">
         Fee Structure
       </h1>
       <div className="flex flex-col max-w-xs md:max-w-sm mx-auto items-center mt-10">
@@ -42,36 +47,50 @@ const FeesStructure = () => {
       </div>
       <div className="max-w-screen-sm mx-auto mt-5 p-2">
         {feesInfo && (
-          <>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{duration:0.5}}
+          >
             <h2 className="text-3xl text-center text-blue-600 font-semibold mb-4">
               {feesInfo.class}
             </h2>
             <div className="bg-white flex flex-col gap-3 shadow-md rounded-lg p-1 uppercase">
               <span className="p-2 rounded-2xl gap-2 text-center text-white bg-orange-600 flex flex-col">
                 <span>First Quarter (On Admission):</span>{" "}
-                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">{feesInfo.firstQuarter}</span>
+                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">
+                  {feesInfo.firstQuarter}
+                </span>
               </span>
               <span className="p-2 rounded-2xl gap-2 text-center text-white bg-orange-600 flex flex-col">
                 <span> Second Quarter (1-10 AUG):</span>{" "}
-                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">{feesInfo.secondQuarter}</span>
+                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">
+                  {feesInfo.secondQuarter}
+                </span>
               </span>
               <span className="p-2 rounded-2xl gap-2 text-center text-white bg-orange-600 flex flex-col">
                 <span>Third Quarter (1-10 NOV):</span>{" "}
-                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">{feesInfo.thirdQuarter}</span>
+                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">
+                  {feesInfo.thirdQuarter}
+                </span>
               </span>
               <span className="p-2 rounded-2xl gap-2 text-center text-white bg-orange-600 flex flex-col">
                 <span> Fourth Quarter (1-10 JAN):</span>{" "}
-                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">{feesInfo.fourthQuarter}</span>
+                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">
+                  {feesInfo.fourthQuarter}
+                </span>
               </span>
               <span className="p-2 rounded-2xl gap-2 text-center text-white bg-orange-600 flex flex-col">
                 <span> Total Fees (Yearly):</span>{" "}
-                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">{feesInfo.totalFees}</span>
+                <span className="text-lg p-1 bg-white text-black w-50 mx-auto rounded-lg">
+                  {feesInfo.totalFees}
+                </span>
               </span>
             </div>
-          </>
+          </motion.div>
         )}
       </div>
-      <p className="max-w-screen-lg text-center text-sm md:text-lg mx-auto mt-4">
+      <p className="transition max-w-screen-lg text-center text-sm md:text-lg mx-auto mt-4">
         CBSE school fees in Nagpur, like in other cities in India, can vary
         depending on several factors, including the reputation and facilities of
         the school, grade level, location, and other additional services
@@ -87,7 +106,7 @@ const FeesStructure = () => {
       </p>
       <a
         href="unavailable"
-        className="text-lg font-semibold text-blue-400 w-60 mt-5 block mx-auto"
+        className="transition-all transformtext-lg font-semibold text-blue-400 w-60 mt-5 block mx-auto"
       >
         Download Fees Structure
       </a>

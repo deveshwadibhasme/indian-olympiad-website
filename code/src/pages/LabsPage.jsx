@@ -3,7 +3,7 @@ import React from "react";
 const LabsPage = () => {
 return (
     <section className="w-full flex-center min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-auto bg-slate-50">
-        <h1 className="text-2xl relative hori-strip after:top-15 md:mt-2 md:text-5xl text-blue-600 text-center font-bold">
+        <h1 className="text-2xl relative hori-strip after:top-10 md:after:top-14 md:mt-2 md:text-5xl text-blue-600 text-center font-bold">
             School Labs
         </h1>
         <div className="max-w-screen-xl mx-auto mt-5 p-2">

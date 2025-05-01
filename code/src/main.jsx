@@ -10,6 +10,7 @@ const AboutPage = React.lazy(() => import('./pages/AboutUs.jsx'));
 const InfrastructurePage = React.lazy(() => import('./pages/Infrastructure.jsx'));
 const LabsPage = React.lazy(() => import('./pages/LabsPage.jsx'));
 const FeesStructurePage = React.lazy(() => import('./pages/FeesStructure.jsx'));
+const TransportPage = React.lazy(() => import('./pages/TransportPage.jsx'));
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/fee-structure",
         element: <FeesStructurePage />,
+      },
+      {
+        path: "/transport-routes",
+        element: <TransportPage />,
       }
     ],
   },
