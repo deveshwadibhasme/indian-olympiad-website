@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <>
       <section className="w-full mx-auto bg-white relative shaded-bg">
-        <video autoPlay loop muted className=" lg:w-full relative h-auto">
+        <video autoPlay loop muted className="lg:w-full relative h-auto">
           <source src={introVideo} type="video/mp4" />
         </video>
         <motion.div

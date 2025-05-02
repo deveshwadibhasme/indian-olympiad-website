@@ -14,7 +14,7 @@ const AboutUs = () => {
     <section className="w-full flex-center min-h-screen h-full mt-2 md:mt-14 flex-col relative mx-auto bg-slate-50">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-2xl md:mt-2 relative hori-strip after:top-15 md:text-4xl text-blue-600 text-center font-bold"
       >
@@ -37,8 +37,8 @@ const AboutUs = () => {
         {aboutUsData.map((item, index) => (
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.5 , delay: index * 0.2 }}
             key={index}
             className="bg-white max-w-sm w-full shadow-lg rounded-lg p-6 m-4 transition-transform transform hover:scale-105"
           >

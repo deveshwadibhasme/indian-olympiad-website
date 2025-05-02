@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import InfrastructureDetails from "../data/infrastructure.js";
 
 const Infrastructure = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <section className="w-full flex-center min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-autobg-slate-50">
       <h1 className="text-2xl md:mt-2 md:text-5xl relative hori-strip after:top-10 md:after:top-14 text-blue-600 text-center font-bold">
@@ -19,12 +26,13 @@ const Infrastructure = () => {
             key={index}
             className="bg-white rounded-lg shadow-md p-4 flex flex-col"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true , amount: 0.2 }}
+            animate={{ opacity: 1, y: 0 }}  
             transition={{ duration: 0.3, delay: index * 0.1 }}
           >
             <h2 className="text-sm md:text-xl font-semibold text-gray-800">
-              {item.srNo}{". "}{item.particular} {item.no && `(${item.no})`}
+              {item.srNo}
+              {". "}
+              {item.particular} {item.no && `(${item.no})`}
             </h2>
             <p className="text-sm text-gray-600 mt-2">
               <span className="font-medium">Dimension:</span> {item.dimension}
