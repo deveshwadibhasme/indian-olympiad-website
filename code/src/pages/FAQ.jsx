@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const FAQ = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const schoolQA = [
     {
       que: "What curriculum will the school follow?",
@@ -12,7 +20,8 @@ const FAQ = () => {
     },
     {
       que: "How can the school be located / How can we reach the school?",
-      ans: "1. Kindly follow the given link for Google Map / Map Location.\n2. Indora Square (Jaswant Tuli Mall) → Automotive Square (Maruti Suzuki Showroom & Service Station) → Octrio Post No.2 (Naka No.2) → Bhilgaon Gate (Yashodhara Lawns) → Gangwani Garden → Indian Olympiad School.",
+      ans: `1. Kindly follow the given link for Google Map / Map Location.
+            2. Indora Square (Jaswant Tuli Mall) → Automotive Square (Maruti Suzuki Showroom & Service Station) → Octrio Post No.2 (Naka No.2) → Bhilgaon Gate (Yashodhara Lawns) → Gangwani Garden → Indian Olympiad School.`,
     },
     {
       que: "What will be the school timings?",
@@ -46,11 +55,11 @@ const FAQ = () => {
       {schoolQA.map((qa, index) => (
         <div
           key={index}
-          className="w-[60vw] mx-auto rounded-md mb-5 p-2 relative perspective bg-white duration-300 ease-in-out"
+          className="max-w-3xl w-full mx-auto rounded-md mb-5 p-2 relative perspective bg-white duration-300 ease-in-out"
         >
           <div className="flex justify-between items-center">
             <span
-              className={`text-xl transition-[height,transform] origin-bottom duration-400 ${
+              className={`text-lg md:text-xl transition-[height,transform] origin-bottom duration-400 ${
                 activeIndex === index
                   ? "-rotate-x-180 h-0"
                   : "rotate-x-0"
@@ -68,7 +77,7 @@ const FAQ = () => {
             </button>
           </div>
           <p
-            className={`text-xl top-0 left-0 transition-[height,transform] origin-top duration-400 ${
+            className={`text-lg md:text-xl  top-0 left-0 transition-[height,transform] origin-top duration-400 ${
               activeIndex === index ? "rotate-x-0 opacity-100 h-full relative" : "opacity-0 -rotate-x-180 h-0 absolute"
             } backface-hidden`}
           >

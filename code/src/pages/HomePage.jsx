@@ -12,7 +12,7 @@ const HomePage = () => {
           <source src={introVideo} type="video/mp4" />
         </video>
         <motion.div
-          className="absolute top-1/2 lg:top-1/4 -translate-y-1/2 left-2 md:left-15 z-10"
+          className="absolute top-1/2 lg:top-1/3 -translate-y-1/2 left-2 md:left-15 z-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
