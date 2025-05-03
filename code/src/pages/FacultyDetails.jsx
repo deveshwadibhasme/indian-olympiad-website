@@ -1,6 +1,5 @@
 import React from "react";
 import facultyDetails from "../data/faculty-details.js";
-import Tilt from "react-parallax-tilt";
 
 const FacultyDetails = () => {
   return (
@@ -13,6 +12,16 @@ const FacultyDetails = () => {
           {facultyDetails.map((faculty, index) => (
               <div
                 key={index}
+                onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();    
+                    e.target.parentElement.classList.replace("rotate-y-0","-rotate-y-180");
+                    e.target.parentElement.nextSibling.classList.replace("rotate-y-180","-rotate-y-0");
+                    setTimeout(() => {
+                      e.target.parentElement.classList.replace("-rotate-y-180","rotate-y-0");
+                      e.target.parentElement.nextSibling.classList.replace("-rotate-y-0","rotate-y-180");
+                    }, 3000);
+                }}
                 className="group  relative text-center rounded-lg flex flex-col items-center h-72    justify-center overflow-hidden cursor-grab transition-shadow duration-300 ease-in-out transform perspective-normal bg-transparent"
               >
                 <div className="relative w-full backface-hidden group-hover:-rotate-y-180 transform-3d transition-transform duration-600 origin-center h-full rotate-y-0 ease-in-out ">
@@ -21,7 +30,7 @@ const FacultyDetails = () => {
                     alt={faculty.name}
                     className="w-full absolute h-full object-cover"
                   />
-                  <h2 className="text-lg font-bold relative bg-amber-50">{faculty.name}</h2>
+                  <h2 className="text-lg font-bold relative text-white text-shadow bg-blue-950">{faculty.name}</h2>
                 </div>
                 <div className="absolute bg-white shadow-2xl border inset-0 flex flex-col items-center justify-center p-4 backface-hidden rotate-y-180 group-hover:-rotate-y-0 transform-3d transition-transform duration-600 origin-center">  
                   <p className="text-gray-600 text-xl">{faculty.designation}</p>

@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import "./index.css";
 import App from "./App.jsx";
 import SchoolTiming from './pages/SchoolTiming.jsx';
+import FAQ from './pages/FAQ.jsx';
+import Cbse from './pages/Cbse.jsx';  
+
 const HomePage = React.lazy(() => import('./pages/HomePage.jsx'));
 const Error = React.lazy(() => import('./components/Error.jsx'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage.jsx'));
@@ -60,6 +63,14 @@ const router = createBrowserRouter([
       {
         path: "/faculty-details",
         element: <FacultyDetails />,
+      },
+      {
+        path: "/faq",
+        element: <FAQ />,
+      },
+      {
+        path: "/cbse",
+        element: <Cbse />,
       }
     ],
   },
