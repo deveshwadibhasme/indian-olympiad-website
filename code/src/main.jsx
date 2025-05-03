@@ -13,7 +13,7 @@ const LabsPage = React.lazy(() => import('./pages/LabsPage.jsx'));
 const FeesStructurePage = React.lazy(() => import('./pages/FeesStructure.jsx'));
 const TransportPage = React.lazy(() => import('./pages/TransportPage.jsx'));
 const ActivityCalender = React.lazy(() => import('./pages/ActivityCalender.jsx'));
-
+const FacultyDetails = React.lazy(() => import('./pages/FacultyDetails.jsx'));
 
 const router = createBrowserRouter([
   {
@@ -56,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/activity-calender",
         element: <ActivityCalender />,
+      },
+      {
+        path: "/faculty-details",
+        element: <FacultyDetails />,
       }
     ],
   },
