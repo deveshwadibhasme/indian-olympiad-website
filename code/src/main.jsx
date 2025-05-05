@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import SchoolTiming from './pages/SchoolTiming.jsx';
 import FAQ from './pages/FAQ.jsx';
 import Cbse from './pages/Cbse.jsx';  
+import Carrer from './pages/Careers.jsx';
 
 const HomePage = React.lazy(() => import('./pages/HomePage.jsx'));
 const Error = React.lazy(() => import('./components/Error.jsx'));
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
       {
         path: "/cbse",
         element: <Cbse />,
+      },
+      {
+        path: "/carrer",
+        element: <Carrer />,
       }
     ],
   },
