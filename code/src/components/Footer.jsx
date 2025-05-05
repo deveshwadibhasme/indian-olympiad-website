@@ -25,11 +25,11 @@ const Footer = () => {
         <div className="flex-1 min-w-[250px]">
           <h3 className="text-lg font-semibold mb-2 border-b border-white inline-block">Quick Links</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Infrastructure</a></li>
-            <li><a href="#" className="hover:underline">Labs</a></li>
-            <li><a href="#" className="hover:underline">Career</a></li>
-            <li><a href="#" className="hover:underline">Fee Structure</a></li>
-            <li><a href="#" className="hover:underline">School Guidelines</a></li>
+            <li><a href="/infrastructure" className="hover:underline">Infrastructure</a></li>
+            <li><a href="/labs" className="hover:underline">Labs</a></li>
+            <li><a href="/carrer" className="hover:underline">Career</a></li>
+            <li><a href="/fee-structure" className="hover:underline">Fee Structure</a></li>
+            <li><a href="/admission-guidelines" className="hover:underline">Admission Guidelines</a></li>
           </ul>
         </div>
 
@@ -37,11 +37,11 @@ const Footer = () => {
         <div className="flex-1 min-w-[250px]">
           <h3 className="text-lg font-semibold mb-2 border-b border-white inline-block">Other Links</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Route Transport</a></li>
-            <li><a href="#" className="hover:underline">Activity Calendar</a></li>
-            <li><a href="#" className="hover:underline">FAQ</a></li>
-            <li><a href="#" className="hover:underline">School Timing</a></li>
-            <li><a href="#" className="hover:underline">School Guidelines</a></li>
+            <li><a href="/transport-routes" className="hover:underline">Route Transport</a></li>
+            <li><a href="/activity-calender" className="hover:underline">Activity Calendar</a></li>
+            <li><a href="/faq" className="hover:underline">FAQ</a></li>
+            <li><a href="/school-timing" className="hover:underline">School Timing</a></li>
+            <li><a href="/admission-guidelines" className="hover:underline">Admission Guidelines</a></li>
           </ul>
         </div>
 
