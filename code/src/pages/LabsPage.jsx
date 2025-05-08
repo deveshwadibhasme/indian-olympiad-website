@@ -15,8 +15,8 @@ const LabsPage = () => {
       description:
         "Our computer lab is equipped with the latest technology and software to provide students with hands-on experience in programming, web development, and data analysis.",
       images: [
-        "https://ios.anicomic.in/assets-images/labpageimg10.jpg",
-        "https://ios.anicomic.in/assets-images/labpageimg10.jpg",
+        "/assets-images/labpageimg10.jpg",
+        "/assets-images/labpageimg10.jpg",
       ],
     },
     {
@@ -24,8 +24,8 @@ const LabsPage = () => {
       description:
         "The chemistry lab is designed for experiments and practical learning in chemistry. Students can conduct experiments safely under the guidance of qualified instructors.",
       images: [
-        "https://ios.anicomic.in/assets-images/labpageimg8.jpg",
-        "https://ios.anicomic.in/assets-images/labpageimg7.jpg",
+        "/assets-images/labpageimg8.jpg",
+        "/assets-images/labpageimg7.jpg",
       ],
     },
     {
@@ -33,8 +33,8 @@ const LabsPage = () => {
       description:
         "Our biology lab is equipped with microscopes and other instruments for students to explore the world of living organisms and conduct experiments in biology.",
       images: [
-        "https://ios.anicomic.in/assets-images/labpageimg5.jpg",
-        "https://ios.anicomic.in/assets-images/labpageimg4.jpg",
+        "/assets-images/labpageimg5.jpg",
+        "/assets-images/labpageimg4.jpg",
       ],
     },
   ];
@@ -62,9 +62,9 @@ const LabsPage = () => {
                     key={imageIndex}
                     loading="lazy"
                     src={
-                      location.hostname === ("localhost" ||
-                      "https://indian-olympiad-website.vercel.app")
-                        ? image
+                      location.hostname === "localhost" ? `https://ios.anicomic.in${image}` :
+                       location.hostname === "https://indian-olympiad-website.vercel.app" ?
+                      `https://indian-olympiad-website.vercel.app${image}`
                         : location.hostname + image
                     }
                     alt={lab.title}
