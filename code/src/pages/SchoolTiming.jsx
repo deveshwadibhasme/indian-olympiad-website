@@ -10,8 +10,8 @@ const SchoolTiming = () => {
   }, []);
 
   return (
-    <div className="container p-4 w-full flex items-center  min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-auto bg-slate-50">
-      <h1 className="text-2xl md:mt-2 relative hori-strip after:top-15 md:text-4xl text-blue-600 text-center font-bold">
+    <div className="container p-4 w-full flex items-center  min-h-screen mb-10 h-full flex-col relative mx-auto bg-slate-50">
+      <h1 className="text-2xl md:mt-2 relative hori-strip after:top-15 md:text-heading text-blue-600 text-center font-bold">
         School Timings
       </h1>
       <div className="flex flex-col text-center mt-10 gap-20 p-3">

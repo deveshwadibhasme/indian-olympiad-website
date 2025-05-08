@@ -36,9 +36,9 @@ const TransportPage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
       onClick={handleIndexZero}
-      className="w-full flex-center min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-auto"
+      className="w-full flex-center min-h-screen mb-10 h-full flex-col relative mx-auto"
     >
-      <h1 className="text-2xl md:mt-5 md:text-5xl relative hori-strip after:top-10 md:after:top-14 text-blue-600 text-center font-bold">
+      <h1 className="text-2xl md:mt-5 md:text-heading relative hori-strip after:top-10 md:after:top-14 text-blue-600 text-center font-bold">
         Route Wise Transport
       </h1>
       <p className="max-w-screen-lg text-center mx-auto mt-4">

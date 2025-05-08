@@ -8,7 +8,7 @@
 
   #root{
     font-family: 'Work Sans', sans-serif;
-    @apply w-full flex flex-col gap-0 min-h-screen max-w-screen pt-25;
+    @apply w-full flex flex-col gap-0 min-h-screen max-w-screen;
   }
 
   .partition-line::after {
@@ -76,4 +76,5 @@
 
 @theme {
     --color-shade-blue: #00274a;
+    --text-heading: 48px;
 }

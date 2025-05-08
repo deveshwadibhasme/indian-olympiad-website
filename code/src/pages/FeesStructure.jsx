@@ -34,12 +34,12 @@ const FeesStructure = () => {
 
   return (
     <motion.section
-      className="w-full flex-center min-h-screen mb-10 h-full mt-2 md:mt-14 flex-col relative mx-autobg-slate-50"
+      className="w-full flex-center min-h-screen mb-10 h-full flex-col relative mx-autobg-slate-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className="text-2xl md:mt-2 md:text-5xl relative hori-strip after:top-10 md:after:top-14 text-blue-600 text-center font-bold">
+      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-17 text-blue-600 text-center font-bold">
         Fee Structure
       </h1>
       <motion.div

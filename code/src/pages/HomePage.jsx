@@ -19,7 +19,7 @@ const HomePage = () => {
           viewport={{ once: true }}
         >
         <motion.h1
-          className=" text-white -translate-y-1/2 text-2xl md:text-5xl text-shadow-[0px_4px_10px] text-shadow-black font-semibold left-2 md:left-15 w-70 md:w-110 z-10"
+          className=" text-white -translate-y-1/2 text-2xl md:text-heading text-shadow-[0px_4px_10px] text-shadow-black font-semibold left-2 md:left-15 w-70 md:w-110 z-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

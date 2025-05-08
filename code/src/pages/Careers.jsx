@@ -55,14 +55,14 @@ const Careers = () => {
 
   return (
     <motion.section
-      className="w-full flex-center min-h-screen h-full mt-2 md:mt-14 flex-col relative mx-auto bg-gray-100"
+      className="w-full flex-center min-h-screen h-full flex-col relative mx-auto bg-gray-100"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <div className="container mt-4 mx-auto px-4">
         <motion.h1
-          className="text-3xl md:text-5xl text-blue-600 text-center font-bold mb-8 relative hori-strip after:top-1 md:after:top-15"
+          className="text-3xl md:text-heading text-blue-600 text-center font-bold mb-8 relative hori-strip after:top-20 md:after:top-15"
           variants={headingVariants}
         >
           Careers At Indian Olympiad School

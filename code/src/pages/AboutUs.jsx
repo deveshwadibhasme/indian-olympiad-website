@@ -11,12 +11,12 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section className="w-full flex-center min-h-screen h-full mt-2 md:mt-14 flex-col relative mx-auto bg-slate-50">
+    <section className="w-full flex-center min-h-screen h-full  flex-col relative mx-auto bg-slate-50">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-2xl md:mt-2 relative hori-strip after:top-15 md:text-4xl text-blue-600 text-center font-bold"
+        className="text-2xl md:mt-2 relative hori-strip after:top-10 md:after:top-17 md:text-heading text-blue-600 text-center font-bold"
       >
         ABOUT US | IOS
       </motion.h1>
