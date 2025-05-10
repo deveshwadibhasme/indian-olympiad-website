@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { getImageLink } from "../utils/getimage";
+import { getImageLink } from "../utils/getImage";
 import { motion } from "framer-motion";
 
 const DirectorPage = () => {

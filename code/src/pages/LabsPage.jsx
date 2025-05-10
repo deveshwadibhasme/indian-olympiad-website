@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { getImageLink } from "../utils/getimage";
+import { getImageLink } from "../utils/getImage";
 
 const LabsPage = () => {
   useEffect(() => {
