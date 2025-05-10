@@ -52,7 +52,7 @@ const MobileNav = ({ isMobile, setIsMobile, setIcon }) => {
                   onClick={() => handleMouseLeave(item.path)}
                   className="text-black transition-all text-sm uppercase font-semibold cursor-pointer text-center"
                 >
-                  <span className="hover:text-orange-500 peer text-center">
+                  <span className="hover:text-shade-blue-light peer text-center">
                     {item.title}{" "}
                     {item.dropDown && <FontAwesomeIcon icon={faCaretDown} />}
                   </span>
@@ -71,7 +71,7 @@ const MobileNav = ({ isMobile, setIsMobile, setIcon }) => {
                           <Link
                             to={subItem?.path}
                             onClick={() => handleMouseLeave(subItem.path)}
-                            className="group transition-all block w-full ml-2 mb-1 text-sm rounded-2xl relative text-white py-2 bg-orange-700 px-2"
+                            className="group transition-all block w-full ml-2 mb-1 text-sm rounded-2xl relative text-white py-2 bg-shade-blue-light px-2"
                           >
                             <FontAwesomeIcon
                               icon={faArrowRight}

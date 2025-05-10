@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Careers = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const skills = [
     "Critical Thinking",
     "Patience",
@@ -62,7 +70,7 @@ const Careers = () => {
     >
       <div className="container mt-4 mx-auto px-4">
         <motion.h1
-          className="text-3xl md:text-heading text-blue-600 text-center font-bold mb-8 relative hori-strip after:top-20 md:after:top-15"
+          className="text-3xl md:text-heading text-shade-blue-light text-center font-bold mb-8 relative hori-strip after:top-20 md:after:top-15"
           variants={headingVariants}
         >
           Careers At Indian Olympiad School

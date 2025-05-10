@@ -7,6 +7,7 @@ import SchoolTiming from './pages/SchoolTiming.jsx';
 import FAQ from './pages/FAQ.jsx';
 import Cbse from './pages/Cbse.jsx';  
 import Carrer from './pages/Careers.jsx';
+import DirectorPage from './pages/DirectorPage.jsx';
 
 const HomePage = React.lazy(() => import('./pages/HomePage.jsx'));
 const Error = React.lazy(() => import('./components/Error.jsx'));
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
       {
         path: "/carrer",
         element: <Carrer />,
+      },
+      {
+        path:"/directors-desk",
+        element: <DirectorPage />
       }
     ],
   },

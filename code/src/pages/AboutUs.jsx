@@ -16,7 +16,7 @@ const AboutUs = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-2xl md:mt-2 relative hori-strip after:top-10 md:after:top-17 md:text-heading text-blue-600 text-center font-bold"
+        className="text-2xl md:mt-2 relative hori-strip after:top-10 md:after:top-17 md:text-heading text-shade-blue-light text-center font-bold"
       >
         ABOUT US | IOS
       </motion.h1>
@@ -42,7 +42,7 @@ const AboutUs = () => {
             key={index}
             className="bg-white max-w-sm w-full shadow-lg rounded-lg p-6 m-4 transition-transform transform hover:scale-105"
           >
-            <h2 className="text-xl font-semibold text-blue-600 mb-2">
+            <h2 className="text-xl font-semibold text-shade-blue-light mb-2">
               {item.title}
             </h2>
             <p className="text-gray-700">{item.description}</p>

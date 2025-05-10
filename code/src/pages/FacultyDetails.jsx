@@ -28,7 +28,7 @@ const FacultyDetails = () => {
 
   return (
     <section className="w-full flex-center min-h-screen h-full flex-col relative mx-auto bg-gray-100">
-      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-15 text-blue-600 text-center font-bold">
+      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-15 text-shade-blue-light text-center font-bold">
         Faculty Details
       <small className="text-center block text-xs text-black mt-7 font-normal">Hover For More Info</small>
       </h1>

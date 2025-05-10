@@ -58,7 +58,7 @@
     height: 40px;
     width: 35px;
     border-bottom-left-radius: 6px ;
-    background-color: #c93600;
+    background-color: var(--color-shade-blue-light);
     clip-path: polygon(49% 51%, 0% 100%, 100% 100%);
     z-index: 1;
   }
@@ -76,5 +76,7 @@
 
 @theme {
     --color-shade-blue: #00274a;
+    --color-shade-blue-light: #155dfc;
+    --bg-main-colour:#155dfc;
     --text-heading: 48px;
 }

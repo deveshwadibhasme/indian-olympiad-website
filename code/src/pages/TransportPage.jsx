@@ -38,7 +38,7 @@ const TransportPage = () => {
       onClick={handleIndexZero}
       className="w-full flex-center min-h-screen mb-10 h-full flex-col relative mx-auto"
     >
-      <h1 className="text-2xl md:mt-5 md:text-heading relative hori-strip after:top-10 md:after:top-14 text-blue-600 text-center font-bold">
+      <h1 className="text-2xl md:mt-5 md:text-heading relative hori-strip after:top-10 md:after:top-14 text-shade-blue-light text-center font-bold">
         Route Wise Transport
       </h1>
       <p className="max-w-screen-lg text-center mx-auto mt-4">

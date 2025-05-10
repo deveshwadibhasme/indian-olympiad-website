@@ -49,7 +49,7 @@ const FAQ = () => {
 
   return (
     <section className="w-full flex-center min-h-screen h-full flex-col relative mx-auto bg-gray-100">
-      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-15 text-blue-600 text-center font-bold mb-10">
+      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-15 text-shade-blue-light text-center font-bold mb-10">
         Faculty Details
       </h1>
       {schoolQA.map((qa, index) => (

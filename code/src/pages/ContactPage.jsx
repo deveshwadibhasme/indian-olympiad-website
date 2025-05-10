@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import ContactLayout from "../layouts/ContactLayout";
 
 const ContactPage = () => {
   const [dirChange, setdirChange] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="w-full flex-center flex-col relative mx-auto bg-slate-50">
       <div className="max-w-full rounded-xl bg-white w-full min-h-[550px] shadow-sm shadow-slate-500 mx-auto px-6 pb-9 flex items-center flex-col">
-        <h1 className="text-4xl md:text-heading mt-1 relative hori-strip after:top-13 md:after:top-17 text-blue-600 text-center font-bold">
+        <h1 className="text-4xl md:text-heading mt-1 relative hori-strip after:top-13 md:after:top-17 text-shade-blue-light text-center font-bold">
           Contact Us 
         </h1>
         <div

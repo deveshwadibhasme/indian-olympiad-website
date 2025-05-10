@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { getImageLink } from "../utils/getimage";
 
 const LabsPage = () => {
   useEffect(() => {
@@ -41,7 +42,7 @@ const LabsPage = () => {
 
   return (
     <section className="relative flex w-full min-h-screen flex-col items-center justify-center mx-auto mb-10 h-full bg-slate-50">
-      <h1 className="relative text-3xl text-center font-bold text-blue-600 hori-strip md:text-heading md:mt-2 after:top-10 md:after:top-17">
+      <h1 className="relative text-3xl text-center font-bold text-shade-blue-light hori-strip md:text-heading md:mt-2 after:top-10 md:after:top-17">
         School Labs
       </h1>
       <div className="max-w-screen-xl mx-auto mt-5 p-2">
@@ -61,12 +62,7 @@ const LabsPage = () => {
                   <img
                     key={imageIndex}
                     loading="lazy"
-                    src={
-                      location.hostname === "localhost" ? `https://ios.anicomic.in${image}` :
-                       location.hostname === "https://indian-olympiad-website.vercel.app" ?
-                      `https://indian-olympiad-website.vercel.app${image}`
-                        : location.hostname + image
-                    }
+                    src={getImageLink(image)}
                     alt={lab.title}
                     className="mx-auto max-w-sm object-cover w-full min-h-80 bg-emerald-200 rounded-lg shadow-lg"
                   />

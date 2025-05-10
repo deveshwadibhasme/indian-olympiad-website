@@ -12,7 +12,7 @@ const Infrastructure = () => {
 
   return (
     <section className="w-full flex-center min-h-screen mb-10 h-full flex-col relative mx-autobg-slate-50">
-      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-14 text-blue-600 text-center font-bold">
+      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-14 text-shade-blue-light text-center font-bold">
         School Infrastructure
       </h1>
       <p className="max-w-screen-lg text-center mx-auto mt-4">

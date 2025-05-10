@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import introVideo from "../assets/sample-ios.mp4";
 import WelcomePage from "../layouts/WelcomePage";
 import Branches from "../layouts/Branches";
 
 const HomePage = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <>
       <section className="w-full mx-auto bg-white relative shaded-bg">
@@ -27,7 +35,7 @@ const HomePage = () => {
         >
           We Enter to Learn Leave to Achieve
         </motion.h1>
-          <button className="flex items-center bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium hover:bg-blue-600 transition duration-300 cursor-pointer">
+          <button className="flex items-center bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium hover:bg-shade-blue-light transition duration-300 cursor-pointer">
             Explore More
             <span className="ml-2">&rarr;</span>
           </button>

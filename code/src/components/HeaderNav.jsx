@@ -47,7 +47,7 @@ const HeaderNav = ({setIsMobile,icon,setIcon}) => {
               className="text-black self-start text-sm uppercase font-semibold cursor-pointer"
             >
               <span
-                className="hover:text-orange-500 peer"
+                className="hover:text-blue-500 peer"
               >
                 {item.title}{" "}
                 {item.dropDown && <FontAwesomeIcon icon={faCaretDown} />}
@@ -59,7 +59,7 @@ const HeaderNav = ({setIsMobile,icon,setIcon}) => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute w-50 top-18 left-0 bg-orange-700 shadow-lg rounded-md p-2 flex flex-col gap-5  angled-corner"
+                className="absolute w-50 top-18 left-0 bg-[var(--bg-main-colour)] shadow-lg rounded-md p-2 flex flex-col gap-5  angled-corner"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
