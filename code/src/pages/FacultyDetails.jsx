@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import facultyDetails from "../data/faculty-details.js";
 import { motion } from "framer-motion";
+import getImageLink from "../utils/getImage.js";
 
 const FacultyDetails = () => {
   useEffect(() => {
@@ -28,7 +29,7 @@ const FacultyDetails = () => {
 
   return (
     <section className="w-full flex-center min-h-screen h-full flex-col relative mx-auto bg-gray-100">
-      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-15 text-shade-blue-light text-center font-bold">
+      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-18 text-shade-blue-light text-center font-bold">
         Faculty Details
       <small className="text-center block text-xs text-black mt-7 font-normal">Hover For More Info</small>
       </h1>
@@ -45,17 +46,17 @@ const FacultyDetails = () => {
               <div
                 onClick={(e) => handleClick(index, e)}
                 faculty-no={index}
-                className="relative w-full backface-hidden group-hover:-rotate-y-180 transform-3d transition-transform duration-600 origin-center h-full rotate-y-0 ease-in-out "
+                className="relative w-full backface-hidden group-hover:-rotate-y-180 transform-3d transition-transform duration-600 origin-center h-full rotate-y-0 ease-in-out"
               >
                 <img
-                  src={faculty.image}
+                  src={getImageLink(faculty.image)}
                   alt={faculty.name}
                   faculty-no={index}
                   className="w-full absolute h-full object-cover"
                 />
                 <h2 
                 faculty-no={index}
-                className="text-lg font-bold relative text-white text-shadow bg-blue-950">
+                className="text-lg font-bold absolute bottom-0 right-0 w-full text-white text-shadow bg-blue-950">
                   {faculty.name}
                 </h2>
               </div>
