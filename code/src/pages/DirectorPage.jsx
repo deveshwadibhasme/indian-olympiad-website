@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { getImageLink } from "../utils/getImage";
+import getImageLink from "../utils/getImage";
 import { motion } from "framer-motion";
 
 const DirectorPage = () => {
@@ -12,7 +12,7 @@ const DirectorPage = () => {
 
     const imageVariants = {
         hidden: { opacity: 0, x: -100 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }, 
     };
 
     const headingVariants = {
