@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import introVideo from "../assets/sample-ios.mp4";
 import WelcomePage from "../layouts/WelcomePage";
 import Branches from "../layouts/Branches";
+import WhyCBSE from "../layouts/WhyCBSE";
+import StatsBanner from "../layouts/StatsBanner";
 
 const HomePage = () => {
 
@@ -42,7 +44,9 @@ const HomePage = () => {
         </motion.div>
       </section>
       <WelcomePage />
-      <Branches/>
+      <WhyCBSE/>
+      <StatsBanner/>
+      {/* <Branches/> */}
     </>
   );
 };

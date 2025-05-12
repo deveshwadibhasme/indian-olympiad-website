@@ -10,7 +10,7 @@ const Branches = () => {
     >
       <h1 className="text-3xl mt-10 md:mt-2 md:text-6xl mb-10 text-blue-600 text-center font-bold">Our Branches</h1>
       <div className="flex justify-evenly h-50 md:h-screen mb-5 items-center w-full gap-0 flex-row">
-        <div className="max-w-50 md:max-w-screen-md w-full min-h-38 md:min-h-96 object-cover border border-white relative shaded-bg after:bg-violet-400/40 h-full">
+        <div className="max-w-50 md:max-w-screen-sm w-full min-h-38 md:min-h-60 object-cover border border-white relative shaded-bg after:bg-violet-400/40 h-full">
           <img src={BhilGao} className="object-cover w-full h-full" alt="" />
           <div className="absolute top-1/2 left-1/2 gap-5 -translate-1/2 w-full z-5 flex flex-col items-center">
             <h2 className="text-xl md:text-4xl max-w-90 w-full text-center font-semibold text-white mb-6 relative z-10">
@@ -21,7 +21,7 @@ const Branches = () => {
             </button>
           </div>
         </div>
-        <div className="max-w-50 md:max-w-screen-md w-full min-h-38 md:min-h-96 object-cover border border-white relative shaded-bg after:bg-violet-400/40 h-full">
+        <div className="max-w-50 md:max-w-screen-sm w-full min-h-38 md:min-h-60 object-cover border border-white relative shaded-bg after:bg-violet-400/40 h-full">
           <img
             src={PrashantNag}
             className="object-cover w-full h-full"
