@@ -41,10 +41,10 @@ const DirectorPage = () => {
                         initial="hidden"
                         whileInView="visible"
                     >
-                        Welcome Message from the CEO/Principal
+                        Welcome Message from the Hon'able Director
                     </motion.h1>
                     <motion.p
-                        className="w-full"
+                        className="w-full text-center md:text-left"
                         variants={textVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -94,7 +94,7 @@ const DirectorPage = () => {
                         className="h-140 md:h-200 max-w-lg object-cover w-full "
                     />
                     <h4 className="text-center text-xl m-1 font-bold">
-                        Mr. Suhail Ahmed khan
+                        Hon'ble Director Mr. Suhail Ahmed khan
                     </h4>
                 </motion.div>
             </div>

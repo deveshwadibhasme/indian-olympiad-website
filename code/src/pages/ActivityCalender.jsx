@@ -41,7 +41,7 @@ const ActivityCalender = () => {
 
   return (
     <section className="w-full flex-center min-h-screen h-full  flex-col relative mx-auto bg-gray-100">
-        <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-15 text-shade-blue-light text-center font-bold">
+        <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-17 text-shade-blue-light text-center font-bold">
           Activity Calender
         </h1>
       <div className="max-w-screen-xl w-full mx-auto mt-5 p-2">

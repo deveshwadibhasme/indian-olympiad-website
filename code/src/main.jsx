@@ -8,6 +8,7 @@ import FAQ from './pages/FAQ.jsx';
 import Cbse from './pages/Cbse.jsx';  
 import Carrer from './pages/Careers.jsx';
 import DirectorPage from './pages/DirectorPage.jsx';
+import AdmissionProcedure from './pages/AddmissionProcedure.jsx';
 
 const HomePage = React.lazy(() => import('./pages/HomePage.jsx'));
 const Error = React.lazy(() => import('./components/Error.jsx'));
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
       {
         path:"/directors-desk",
         element: <DirectorPage />
+      },
+      {
+        path: "/admission-guidelines",
+        element: <AdmissionProcedure />,
       }
     ],
   },

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#003366] text-white max-w-screen w-full h-full min-h-120 pt-5">
+    <footer className="bg-[#003366] text-white max-w-screen w-full h-full min-h-90 pt-5">
       <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center gap-8">
         {/* Logo and Address */}
         <div className="flex-1 min-w-[250px]">
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
       </div> 
       <div className="text-center text-sm mt-10 border-t border-white pt-4">
-        © {new Date().getFullYear()} — Design by Anicomic. All Rights Reserved.
+        © {new Date().getFullYear()} — All Rights Reserved.
       </div>
     </footer>
   )

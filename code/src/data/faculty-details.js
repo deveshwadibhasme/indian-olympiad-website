@@ -172,7 +172,7 @@ export default[
         designation: "PRT",
         qualification: "M.A.(Hindi), B.Ed.",
         experience: "9 Years",
-        image: "/assets-images/faculty-images/sangeeta-surywanshi.jpg",
+        image: "/assets-images/faculty-images/Sangita-Suryavanshi.jpg",
     },
     {
         name: "HEMLATA CHAPLE",
@@ -214,7 +214,7 @@ export default[
         designation: "TGT",
         qualification: "M.A (Hindi), B.Ed.",
         experience: "11 Years",
-        image: "/assets/profile-icon.jpg",
+        image: "/assets-images/faculty-images/Hemlata-Chitwar.jpg",
     },
     {
         name: "ZEENAT KHAN",
