@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import getImageLink from "../utils/getImage";
 
@@ -11,7 +11,7 @@ const LabsPage = () => {
   }, []);
 
   const labData = [
-    {
+  {
       title: "Computer Lab",
       description:
         "Our computer lab is equipped with the latest technology and software to provide students with hands-on experience in programming, web development, and data analysis.",
@@ -41,31 +41,43 @@ const LabsPage = () => {
   ];
 
   return (
-    <section className="relative flex w-full min-h-screen flex-col items-center justify-center mx-auto mb-10 h-full bg-slate-50">
-      <h1 className="relative text-3xl text-center font-bold text-shade-blue-light hori-strip md:text-heading md:mt-2 after:top-10 md:after:top-17">
-        School Labs
-      </h1>
-      <div className="max-w-screen-xl mx-auto mt-5 p-2">
-        <div className="flex flex-col text-center">
+    <section className="relative w-full min-h-screen bg-gradient-to-b from-slate-50 to-white py-5">
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative text-4xl text-center font-bold text-shade-blue-light hori-strip md:text-5xl mb-12 after:top-10 md:after:top-17"
+      >
+        Our Labs
+      </motion.h1>
+
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col space-y-12">
           {labData.map((lab, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-md p-6"
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"
             >
-              <h2 className="text-2xl font-semibold mb-4">{lab.title}</h2>
-              <p>{lab.description}</p>
-              <div className="mt-4 flex flex-col md:flex-row gap-5">
+              <h2 className="text-3xl font-bold mb-6 text-shade-blue-dark">{lab.title}</h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">{lab.description}</p>
+              <div className="grid md:grid-cols-2 gap-8">
                 {lab.images.map((image, imageIndex) => (
-                  <img
+                  <motion.div
                     key={imageIndex}
-                    loading="lazy"
-                    src={getImageLink(image)}
-                    alt={lab.title}
-                    className="mx-auto max-w-sm object-cover w-full min-h-80 bg-emerald-200 rounded-lg shadow-lg"
-                  />
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <img
+                      loading="lazy"
+                      src={getImageLink(image)}
+                      alt={`${lab.title} - Image ${imageIndex + 1}`}
+                      className="w-full h-96 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                    />
+                  </motion.div>
                 ))}
               </div>
             </motion.div>

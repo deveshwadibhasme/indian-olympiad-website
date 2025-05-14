@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
 
 const FAQ = () => {
-
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -45,46 +46,57 @@ const FAQ = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = React.useState(true);
+  const [activeIndex, setActiveIndex] = React.useState(null);
 
   return (
-    <section className="w-full flex-center min-h-screen h-full flex-col relative mx-auto bg-gray-100">
-      <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-15 text-shade-blue-light text-center font-bold mb-10">
-        Faculty Details
-      </h1>
-      {schoolQA.map((qa, index) => (
-        <div
-          key={index}
-          className="max-w-3xl w-full mx-auto rounded-md mb-5 p-2 relative perspective bg-white duration-300 ease-in-out"
-        >
-          <div className="flex justify-between items-center">
-            <span
-              className={`text-lg md:text-xl transition-[height,transform] origin-bottom duration-400 ${
-                activeIndex === index
-                  ? "-rotate-x-180 h-0"
-                  : "rotate-x-0"
-              } backface-hidden`}
+    <section className="w-full flex-center min-h-screen py-5 px-4 bg-gradient-to-b from-gray-50 to-gray-100">
+      <div className="max-w-4xl w-full mx-auto">
+        <h1 className="text-3xl md:text-4xl text-shade-blue-light text-center font-bold mb-12">
+          Frequently Asked Questions
+        </h1>
+
+        <div className="space-y-4">
+          {schoolQA.map((qa, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
             >
-              {qa.que}
-            </span>
-            <button
-              className="text-xl absolute right-2 bottom-2 cursor-pointer bg-blue-500 text-white rounded-md px-2 z-10"
-              onClick={() => {
-                setActiveIndex(index === activeIndex ? null : index);
-              }}
-            >
-              {activeIndex === index ? "-" : "+"}
-            </button>
-          </div>
-          <p
-            className={`text-lg md:text-xl  top-0 left-0 transition-[height,transform] origin-top duration-400 ${
-              activeIndex === index ? "rotate-x-0 opacity-100 h-full relative" : "opacity-0 -rotate-x-180 h-0 absolute"
-            } backface-hidden`}
-          >
-            Ans : {qa.ans}
-          </p>
+              <button
+                className="w-full text-left p-5 focus:outline-none"
+                onClick={() =>
+                  setActiveIndex(index === activeIndex ? null : index)
+                }
+              >
+                <div className="flex justify-between items-center">
+                  <h2 className="text-lg md:text-xl font-semibold text-gray-800 pr-8">
+                    {qa.que}
+                  </h2>
+                  <span
+                    className={`text-2xl transform transition-transform duration-300 ${
+                      activeIndex === index ? "rotate-180" : ""
+                    }`}
+                  >
+                    <FontAwesomeIcon
+                      icon={faChevronCircleDown}
+                      className="text-shade-blue-light"
+                    />
+                  </span>
+                </div>
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  activeIndex === index ? "max-h-96" : "max-h-0"
+                }`}
+              >
+                <p className="px-5 pb-5 text-gray-600 whitespace-pre-line">
+                  {qa.ans}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 };
