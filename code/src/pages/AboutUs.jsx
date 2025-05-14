@@ -1,8 +1,44 @@
 import React, { useEffect } from "react";
 import aboutUsData from "../data/about-us";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faGraduationCap, 
+  faChalkboardTeacher, 
+  faBookOpen, 
+  faFutbol, 
+  faSchool, 
+  faBus,
+  faPalette,
+  faTheaterMasks,
+  faMedkit
+} from '@fortawesome/free-solid-svg-icons';
 
 const AboutUs = () => {
+  // Get appropriate icon based on index or title
+  const getIcon = (title) => {
+    switch(title.toLowerCase()) {
+      case 'academics':
+        return faGraduationCap;
+      case 'faculty':
+        return faChalkboardTeacher;
+      case 'library':
+        return faBookOpen;
+      case 'sports':
+        return faFutbol;
+      case 'transport':
+        return faBus;
+      case 'art':
+        return faPalette;
+      case 'auditorium':
+        return faTheaterMasks;
+      case 'medical':
+        return faMedkit;
+      default:
+        return faSchool;
+    }
+  };
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -11,37 +47,23 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section className="w-full flex-center min-h-screen h-full  flex-col relative mx-auto bg-slate-50">
-      <motion.h1
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-2xl md:mt-2 relative hori-strip after:top-10 md:after:top-17 md:text-heading text-shade-blue-light text-center font-bold"
-      >
-        ABOUT US | IOS
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.3 }}
-        viewport={{ once: true , amount: 0.2 }}
-        className="max-w-screen-lg text-center mx-auto mt-10"
-      >
-        Indian Olympaid School is one of the trusted Top CBSE school in nagpur.
-        The Indian Olympaid School is recognized throughout the academic world
-        for its progressive approach and commitment to excellence.They provide
-        excellent facilities with experienced faculty. They provide facilities
-        like:
-      </motion.p>
+    <section className="w-full flex-center min-h-screen h-full py-5 flex-col relative mx-auto bg-slate-50">
+     <h1 className="text-3xl md:text-4xl relative mb-2 text-shade-blue-light text-center font-bold">
+          About Us (IOS)
+          <div className="h-1 w-32 bg-blue-600 mx-auto mt-2 rounded-full"></div>
+        </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-4 mt-10 max-w-screen-xl mx-auto">
         {aboutUsData.map((item, index) => (
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.5 , delay: index * 0.2 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
             key={index}
             className="bg-white max-w-sm w-full shadow-lg rounded-lg p-6 m-4 transition-transform transform hover:scale-105"
           >
+            <div className="text-shade-blue-light text-3xl mb-4 flex justify-center">
+              <FontAwesomeIcon icon={getIcon(item.icon)} />
+            </div>
             <h2 className="text-xl font-semibold text-shade-blue-light mb-2">
               {item.title}
             </h2>
