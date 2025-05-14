@@ -8,6 +8,20 @@ const Careers = () => {
       top: 0,
       behavior: "smooth",
     });
+    document.title = "Careers - Indian Olympiad School";
+    const metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Join Indian Olympiad School and make a difference. Explore career opportunities and recruitment procedures."
+      );
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content =
+        "Join Indian Olympiad School and make a difference. Explore career opportunities and recruitment procedures.";
+      document.head.appendChild(meta);
+    }
   }, []);
 
   const skills = [

@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // You'll need to install framer-motion
 
 const AddmissionProcedure = () => {
+  useEffect(() => {
+    document.title = "Admission Guidelines - Indian Olympiad School";
+    const metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Learn about the admission guidelines, required documents, and procedures for enrolling at Indian Olympiad School."
+      );
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content =
+        "Learn about the admission guidelines, required documents, and procedures for enrolling at Indian Olympiad School.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   const requiredDocuments = [
     "Original Transfer Certificate (From Class II Onwards)",
     "Caste Certificate (If Applicable)",

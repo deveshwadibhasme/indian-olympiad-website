@@ -9,6 +9,21 @@ import StatsBanner from "../layouts/StatsBanner";
 const HomePage = () => {
 
   useEffect(() => {
+    document.title = "Indian Olympiad School - Home";
+    const metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Welcome to Indian Olympiad School, the best CBSE school in Nagpur. Explore our curriculum, infrastructure, and more."
+      );
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content =
+        "Welcome to Indian Olympiad School, the best CBSE school in Nagpur. Explore our curriculum, infrastructure, and more.";
+      document.head.appendChild(meta);
+    }
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",

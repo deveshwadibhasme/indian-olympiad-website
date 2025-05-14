@@ -6,6 +6,21 @@ const ContactPage = () => {
   const [dirChange, setdirChange] = useState(false);
 
   useEffect(() => {
+    document.title = "Contact Us - Indian Olympiad School";
+    const metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Get in touch with Indian Olympiad School. Find our contact details, address, and school timings."
+      );
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content =
+        "Get in touch with Indian Olympiad School. Find our contact details, address, and school timings.";
+      document.head.appendChild(meta);
+    }
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",

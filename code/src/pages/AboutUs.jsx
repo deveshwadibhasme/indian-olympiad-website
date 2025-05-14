@@ -40,6 +40,21 @@ const AboutUs = () => {
   };
 
   useEffect(() => {
+    document.title = "About Us - Indian Olympiad School";
+    const metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Learn more about Indian Olympiad School, our mission, vision, and the facilities we provide to ensure quality education."
+      );
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content =
+        "Learn more about Indian Olympiad School, our mission, vision, and the facilities we provide to ensure quality education.";
+      document.head.appendChild(meta);
+    }
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",

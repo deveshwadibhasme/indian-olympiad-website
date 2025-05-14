@@ -3,14 +3,27 @@ import { selectedClass } from "../data/fees-structure";
 import { motion, AnimatePresence } from "framer-motion";
 
 const FeesStructure = () => {
-
   useEffect(() => {
+    document.title = "Fees Structure - Indian Olympiad School";
+    const metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Explore the detailed fee structure of Indian Olympiad School for the academic year 2022-2023."
+      );
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content =
+        "Explore the detailed fee structure of Indian Olympiad School for the academic year 2022-2023.";
+      document.head.appendChild(meta);
+    }
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   }, []);
-
 
   const [feesInfo, setFeesInfo] = useState(null);
 

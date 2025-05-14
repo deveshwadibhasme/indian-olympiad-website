@@ -5,6 +5,21 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 const Cbse = () => {
 
     useEffect(() => {
+        document.title = "CBSE Info - Indian Olympiad School";
+        const metaDescription = document.querySelector("meta[name='description']");
+        if (metaDescription) {
+            metaDescription.setAttribute(
+                "content",
+                "Access CBSE-related information, including affiliation letters, annual planning, and safety certificates."
+            );
+        } else {
+            const meta = document.createElement("meta");
+            meta.name = "description";
+            meta.content =
+                "Access CBSE-related information, including affiliation letters, annual planning, and safety certificates.";
+            document.head.appendChild(meta);
+        }
+
         window.scrollTo({
           top: 0,
           behavior: "smooth",
