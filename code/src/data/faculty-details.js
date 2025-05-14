@@ -1,11 +1,4 @@
-export default[
-    {
-        name: "NITESH GURAO",
-        designation: "Principal PGT",
-        qualification: "M.Sc. Botany, B.Ed.",
-        experience: "15 Years",
-        image: "/assets/profile-icon.jpg",
-    },
+export default [
     {
         name: "KAVITA DUTTA",
         designation: "Vice Principal",
@@ -21,25 +14,11 @@ export default[
         image: "/assets-images/faculty-images/Rajesh-Dutonde.jpg",
     },
     {
-        name: "IFAT PARVEZ ANJUM",
-        designation: "PGT",
-        qualification: "M.Sc. Chemistry, B.Ed.",
-        experience: "10 Years",
-        image: "/assets/profile-icon.jpg",
-    },
-    {
         name: "PRATIBA CHANNE",
         designation: "TGT",
         qualification: "M.A.(Sco.z), B.Ed.",
         experience: "8 Years",
         image: "/assets-images/faculty-images/Pratibha-Sunil-Channe.jpg",
-    },
-    {
-        name: "SAFARAJ MALEK",
-        designation: "TGT",
-        qualification: "B.Sc, D.Ed.",
-        experience: "7 Years",
-        image: "/assets-images/faculty-images/nitesh-gurao.jpg",
     },
     {
         name: "SABAHAT SHARIF",
@@ -70,6 +49,55 @@ export default[
         image: "/assets-images/faculty-images/Farhat-Khan.jpg",
     },
     {
+        name: "AMRIN JAVED",
+        designation: "TGT",
+        qualification: "B.A, B.Ed.",
+        experience: "7 Years",
+        image: "/assets-images/faculty-images/Amrin-Jawed.jpg",
+    },
+    {
+        name: "SWATI VARMA",
+        designation: "PRT",
+        qualification: "B.A, D.Ed.",
+        experience: "5 Years",
+        image: "/assets-images/faculty-images/Swati-Verma.jpg",
+    },
+    {
+        name: "NABINDAR KAUR NARULA",
+        designation: "TGT",
+        qualification: "B.Sc. B.Ed.",
+        experience: "5 Years",
+        image: "/assets-images/faculty-images/Nabindar-Kaur-Narula.jpg",
+    },
+    {
+        name: "SANGEETA SURIYAVANSHI",
+        designation: "PRT",
+        qualification: "M.A.(Hindi), B.Ed.",
+        experience: "9 Years",
+        image: "/assets-images/faculty-images/Sangita-Suryavanshi.jpg",
+    },
+    {
+        name: "HEMLATA CHITWAR",
+        designation: "TGT",
+        qualification: "M.A (Hindi), B.Ed.",
+        experience: "11 Years",
+        image: "/assets-images/faculty-images/Hemlata-Chitwar.jpg",
+    },
+    {
+        name: "NITESH GURAO",
+        designation: "Principal PGT",
+        qualification: "M.Sc. Botany, B.Ed.",
+        experience: "15 Years",
+        image: "/assets/profile-icon.jpg",
+    },
+    {
+        name: "IFAT PARVEZ ANJUM",
+        designation: "PGT",
+        qualification: "M.Sc. Chemistry, B.Ed.",
+        experience: "10 Years",
+        image: "/assets/profile-icon.jpg",
+    },
+    {
         name: "SHAMA PARVEEN ALI",
         designation: "TGT",
         qualification: "B.E.(ETC), B.Ed.",
@@ -82,13 +110,6 @@ export default[
         qualification: "M.Tech (VLSI), B.Ed.",
         experience: "6 Years",
         image: "/assets/profile-icon.jpg",
-    },
-    {
-        name: "AMRIN JAVED",
-        designation: "TGT",
-        qualification: "B.A, B.Ed.",
-        experience: "7 Years",
-        image: "/assets-images/faculty-images/Amrin-Javed.jpg",
     },
     {
         name: "ABDUL MOIZ SHEIKH",
@@ -105,23 +126,16 @@ export default[
         image: "/assets/profile-icon.jpg",
     },
     {
-        name: "SWATI VARMA",
-        designation: "PRT",
-        qualification: "B.A, D.Ed.",
-        experience: "5 Years",
-        image: "/assets-images/faculty-images/swati-verma.jpg",
-    },
-    {
-        name: "NABINDAR KAUR NARULA",
-        designation: "TGT",
-        qualification: "B.Sc. B.Ed.",
-        experience: "5 Years",
-        image: "/assets-images/faculty-images/Nabindar-Kaur-Narula.jpg",
-    },
-    {
         name: "NADEEM AKHTAR",
         designation: "PGT",
         qualification: "M.Sc. Physics, B.Ed.",
+        experience: "7 Years",
+        image: "/assets/profile-icon.jpg",
+    },
+        {
+        name: "SAFARAJ MALEK",
+        designation: "TGT",
+        qualification: "B.Sc, D.Ed.",
         experience: "7 Years",
         image: "/assets/profile-icon.jpg",
     },
@@ -168,13 +182,6 @@ export default[
         image: "/assets/profile-icon.jpg",
     },
     {
-        name: "SANGEETA SURIYAVANSHI",
-        designation: "PRT",
-        qualification: "M.A.(Hindi), B.Ed.",
-        experience: "9 Years",
-        image: "/assets-images/faculty-images/Sangita-Suryavanshi.jpg",
-    },
-    {
         name: "HEMLATA CHAPLE",
         designation: "PRT",
         qualification: "B.Com, ECCED",
@@ -208,13 +215,6 @@ export default[
         qualification: "B.E.",
         experience: "2 Years",
         image: "/assets/profile-icon.jpg",
-    },
-    {
-        name: "HEMLATA CHITWAR",
-        designation: "TGT",
-        qualification: "M.A (Hindi), B.Ed.",
-        experience: "11 Years",
-        image: "/assets-images/faculty-images/Hemlata-Chitwar.jpg",
     },
     {
         name: "ZEENAT KHAN",

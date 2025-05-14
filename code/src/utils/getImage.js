@@ -4,7 +4,7 @@ const getImageLink = (image) => {
         location.hostname === "localhost" ? `https://ios.anicomic.in${image}` :
             location.hostname === "indian-olympiad-website.vercel.app" ?
                 `https://ios.anicomic.in${image}`
-                : location.href + image
+                : location.origin + image
     );
 }
 
