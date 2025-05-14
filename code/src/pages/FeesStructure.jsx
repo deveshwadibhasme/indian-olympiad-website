@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { selectedClass } from "../data/fees-structure";
 import { motion, AnimatePresence } from "framer-motion";
+import getImage from "../utils/getImage";
 
 const FeesStructure = () => {
   useEffect(() => {
@@ -187,7 +188,9 @@ const FeesStructure = () => {
         will ensure you have the most relevant and up-to-date information.
       </motion.p>
       <motion.a
-        href="unavailable"
+        href={getImage('/assets-docs/Fees Structure 2025-2026.pdf')}
+        download
+        target="_blank"
         className="transition-all transformtext-lg font-semibold text-blue-400 w-60 mt-5 block mx-auto"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
