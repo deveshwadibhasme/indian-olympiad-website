@@ -54,7 +54,7 @@ const WhyCBSE = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Activity Calendar 2022-2023
+              Activity Calendar
             </h3>
             <p className="text-gray-600 text-sm">
               Our class rooms are spacious, clean, well ventilated and high in

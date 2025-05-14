@@ -46,7 +46,7 @@ const HomePage = () => {
       <WelcomePage />
       <WhyCBSE/>
       <StatsBanner/>
-      {/* <Branches/> */}
+      <Branches />
     </>
   );
 };
