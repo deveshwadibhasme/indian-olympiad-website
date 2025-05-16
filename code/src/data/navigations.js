@@ -63,10 +63,10 @@ export default [
         title: 'Admissions',
         path: '#',
         dropDown:[
-            {
-                title: 'Enquiry Form',
-                path: '/enquiry-form'
-            },
+            // {
+            //     title: 'Enquiry Form',
+            //     path: '/enquiry-form'
+            // },
             {
                 title: `Online Registration`,
                 path: '/online-registration'
@@ -82,17 +82,17 @@ export default [
         path: '#',
         dropDown:[
             {
-                title: 'School Toppers',
+                title: 'School Toppers and Alumni',
                 path: '/toppers'
-            },
-            {
-                title: `School Alumni`,
-                path: '/alumni'
             },
             {
                 title: `School Achievers`,
                 path: '/achievers'
             },
+            // {
+            //     title: `School Alumni`,
+            //     path: '/alumni'
+            // },
         ]
     },
     {
