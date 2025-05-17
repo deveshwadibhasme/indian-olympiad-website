@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faBuildingFlag} from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import InfrastructureDetails from "../data/infrastructure.js";
 
@@ -28,11 +30,13 @@ const Infrastructure = () => {
   return (
     <section className="w-full min-h-screen py-5 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h1 
-          initial={{ opacity: 0, y: -20 }}
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-4xl lg:text-5xl relative text-shade-blue-light text-center font-bold mb-8"
+          transition={{ duration: 1, type: "spring" }}
+          className="text-5xl md:text-6xl font-bold text-center my-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
         >
+          <FontAwesomeIcon icon={faBuildingFlag} className="text-amber-400 mr-3" />
           School Infrastructure
         </motion.h1>
         

@@ -4,6 +4,7 @@ import {
   faBars,
   faArrowRight,
   faCaretDown,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import NavigationData from "../data/navigations";
 import { Link } from "react-router-dom";
@@ -27,65 +28,72 @@ const MobileNav = ({ isMobile, setIsMobile, setIcon }) => {
     <AnimatePresence>
       {isMobile && (
         <motion.div
-          key="mobileNav" // added key here
-          initial={{ opacity: 0, x: "100%" }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: "-100%" }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="w-full lg:hidden h-screen absolute top-22 right-0 p-2 bg-white/80 flex flex-col items-center gap-5 z-50"
+          key="mobileNav"
+          initial={{ opacity: 0, y: "-100%" }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: "100%" }}
+          transition={{ type: "tween", stiffness: 100 }}
+          className="fixed inset-0 bg-gradient-to-b from-white to-shade-blue-light/10 backdrop-blur-sm flex md:hidden flex-col items-center pt-20 px-3 z-50"
         >
-          {NavigationData.map((item, index) => {
-            return (
-              <motion.div
-                initial={{ opacity: 0, x: -23 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 23 }}
-                transition={{ duration: 0.3 }}
-                id="navItems"
-                className="relative text-center lg:flex"
-                key={index}
+          {NavigationData.map((item, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              key={index}
+              className="w-full max-w-80 mb-2 mx-auto"
+            >
+              <div
                 onClick={() => handleMouseClick(index)}
-                // onMouseLeave={handleMouseLeave}
+                className="bg-white/80 rounded-xl shadow-sm p-3 mx-auto hover:bg-shade-blue-light/10 transition-all"
               >
                 <Link
                   to={item.path}
                   onClick={() => handleMouseLeave(item.path)}
-                  className="text-black transition-all text-sm uppercase font-semibold cursor-pointer text-center"
+                  className="flex items-center justify-between"
                 >
-                  <span className="hover:text-shade-blue-light peer text-center">
-                    {item.title}{" "}
-                    {item.dropDown && <FontAwesomeIcon icon={faCaretDown} />}
-                  </span>
+                  <span className="text-gray-800 font-medium">{item.title}</span>
+                  {item.dropDown && (
+                    <FontAwesomeIcon
+                      icon={faCaretDown}
+                      className={`transform transition-transform ${
+                        activeDropdown === index ? "rotate-180" : ""
+                      }`}
+                    />
+                  )}
                 </Link>
-                <AnimatePresence>
-                  {activeDropdown === index &&
-                    item?.dropDown?.map((subItem, subIndex) => {
-                      return (
-                        <motion.div
-                          key={subIndex}
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.2, delay: subIndex * 0.05 }}
+              </div>
+
+              <AnimatePresence>
+                {activeDropdown === index && item.dropDown && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="overflow-hidden"
+                  >
+                    {item.dropDown.map((subItem, subIndex) => (
+                      <motion.div
+                        key={subIndex}
+                        initial={{ x: -20, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: subIndex * 0.1 }}
+                      >
+                        <Link
+                          to={subItem.path}
+                          onClick={() => handleMouseLeave(subItem.path)}
+                          className="flex items-center gap-2 px-4 py-2 my-1 ml-4 rounded-lg bg-shade-blue-light/10 hover:bg-shade-blue-light hover:text-white transition-all"
                         >
-                          <Link
-                            to={subItem?.path}
-                            onClick={() => handleMouseLeave(subItem.path)}
-                            className="group transition-all block w-full ml-2 mb-1 text-sm rounded-2xl relative text-white py-2 bg-shade-blue-light px-2"
-                          >
-                            <FontAwesomeIcon
-                              icon={faArrowRight}
-                              className="absolute transition-transform group-hover:translate-x-6 group-hover:opacity-100 opacity-0 right-10 bottom-0 transform -translate-y-1/2"
-                            />
-                            {subItem.title}
-                          </Link>
-                        </motion.div>
-                      );
-                    })}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
+                          <FontAwesomeIcon icon={faArrowRight} className="text-xs" />
+                          <span>{subItem.title}</span>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
         </motion.div>
       )}
     </AnimatePresence>

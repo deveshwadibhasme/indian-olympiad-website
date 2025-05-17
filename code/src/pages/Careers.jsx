@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserGraduate } from "@fortawesome/free-solid-svg-icons";
 
 const Careers = () => {
 
@@ -84,15 +86,14 @@ const Careers = () => {
     >
       <div className="container mt-4 mx-auto px-4">
         <motion.h1
-          className="text-3xl md:text-heading text-shade-blue-light text-center font-bold mb-8 relative hori-strip after:top-20 md:after:top-15"
-          variants={headingVariants}
-        >
-          Careers At Indian Olympiad School
-          <br />
-          <small className="text-sm text-black font-normal">
-            Join us and make a difference
-          </small>
-        </motion.h1>
+                 initial={{ opacity: 0, y: -50 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 1, type: "spring" }}
+                 className="text-4xl md:text-6xl font-bold text-center mb-6 w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+               >
+                 <FontAwesomeIcon icon={faUserGraduate} className="text-amber-400 mr-3" />
+                 Carrer in Indian Olympiad School
+               </motion.h1>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10"
           variants={containerVariants}

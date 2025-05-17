@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faSchoolFlag } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Cbse = () => {
 
@@ -49,9 +50,15 @@ const Cbse = () => {
 
 return (
     <section className="w-full flex-center min-h-screen h-full flex-col relative mx-auto bg-gray-100">
-        <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-15 text-shade-blue-light text-center font-bold">
-            CBSE Information
-        </h1>
+         <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, type: "spring" }}
+          className="text-5xl md:text-6xl font-bold text-center my-5 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+        >
+          <FontAwesomeIcon icon={faSchoolFlag} className="text-amber-400 mr-3" />
+          CBSE Information
+        </motion.h1>
         
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 mt-5">
             {cbseInfo.map((item, index) => (

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // You'll need to install framer-motion
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenClip, faUserGraduate } from "@fortawesome/free-solid-svg-icons";
 
 const AddmissionProcedure = () => {
   useEffect(() => {
@@ -18,6 +20,13 @@ const AddmissionProcedure = () => {
         "Learn about the admission guidelines, required documents, and procedures for enrolling at Indian Olympiad School.";
       document.head.appendChild(meta);
     }
+  }, []);
+
+   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   const requiredDocuments = [
@@ -39,10 +48,15 @@ const AddmissionProcedure = () => {
         transition={{ duration: 0.5 }}
         className="max-w-screen-xl w-full mx-auto mt-5 p-6 bg-white shadow-xl rounded-lg"
       >
-        <h1 className="text-3xl md:text-4xl relative mb-8 text-shade-blue-light text-center font-bold">
-          Admission Procedure
-          <div className="h-1 w-32 bg-blue-600 mx-auto mt-2 rounded-full"></div>
-        </h1>
+        <motion.h1
+                 initial={{ opacity: 0, y: -50 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 1, type: "spring" }}
+                 className="text-5xl md:text-6xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+               >
+                 <FontAwesomeIcon icon={faPenClip} className="text-amber-400 mr-3" />
+                  Admission Procedure
+               </motion.h1>
 
         <div className="flex flex-col gap-6 mt-8">
           {/* Sections with hover effects and better spacing */}

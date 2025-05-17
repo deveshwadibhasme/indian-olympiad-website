@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import facultyDetails from "../data/faculty-details.js";
 import { motion } from "framer-motion";
 import getImageLink from "../utils/getImage.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 
 const FacultyDetails = () => {
   useEffect(() => {
@@ -29,13 +31,18 @@ const FacultyDetails = () => {
 
   return (
     <section className="w-full flex-center min-h-screen h-full flex-col relative mx-auto bg-gradient-to-b from-gray-50 to-gray-200">
-      <h1 className="text-3xl md:text-4xl mt-8 relative text-shade-blue-light text-center font-bold">
-        Our Faculty
-        <div className="h-1 w-20 bg-shade-blue-light mx-auto mt-2"></div>
+       <motion.h1
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, type: "spring" }}
+                className="text-5xl md:text-6xl font-bold text-center my-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+              >
+                <FontAwesomeIcon icon={faPeopleGroup} className="text-amber-400 mr-3" />
+                Our Faculty
+              </motion.h1>
         <small className="text-center block text-sm text-gray-600 mt-4 font-medium">
           Click or hover to learn more about our faculty members
         </small>
-      </h1>
       
       <div className="max-w-screen-xl w-full mx-auto mt-12 p-4">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 min-h-screen">

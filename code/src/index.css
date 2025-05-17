@@ -43,12 +43,6 @@
     background-color: blue;
   }
 
-  /* @media (max-width:800px) {
-    .hori-strip::after{
-      bottom: 200px;
-      left: 50%;
-    }
-  } */
 
   .angled-corner::after{
     content: '';
@@ -65,11 +59,11 @@
 
   .active-right::after {
     content: "";
-    @apply bg-orange-600 h-full absolute top-0 w-[50%] transition-all rounded-xl z-0 right-0;
+    @apply bg-shade-blue-light text-white shadow-md h-full absolute top-0 w-[50%] transition-all rounded-xl z-0 right-0;
   }
   .active-left::after {
     content: "";
-    @apply bg-orange-600 h-full absolute top-0 w-[50%] transition-all rounded-xl z-0 right-1/2;
+    @apply bg-shade-blue-light text-white shadow-md h-full absolute top-0 w-[50%] transition-all rounded-xl z-0 right-1/2;
   }
 
 }

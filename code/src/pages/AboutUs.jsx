@@ -11,7 +11,9 @@ import {
   faBus,
   faPalette,
   faTheaterMasks,
-  faMedkit
+  faMedkit,
+  faTrophy,
+  faInfoCircle
 } from '@fortawesome/free-solid-svg-icons';
 
 const AboutUs = () => {
@@ -63,10 +65,15 @@ const AboutUs = () => {
 
   return (
     <section className="w-full flex-center min-h-screen h-full py-5 flex-col relative mx-auto bg-slate-50">
-     <h1 className="text-3xl md:text-4xl relative mb-2 text-shade-blue-light text-center font-bold">
-          About Us (IOS)
-          <div className="h-1 w-32 bg-blue-600 mx-auto mt-2 rounded-full"></div>
-        </h1>
+     <motion.h1
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, type: "spring" }}
+              className="text-5xl md:text-6xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+            >
+              <FontAwesomeIcon icon={faInfoCircle} className="text-amber-400 mr-3" />
+              About Us
+            </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-4 mt-10 max-w-screen-xl mx-auto">
         {aboutUsData.map((item, index) => (
           <motion.div

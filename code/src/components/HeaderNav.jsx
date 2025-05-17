@@ -8,85 +8,75 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import NavigationData from "../data/navigations";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
-const HeaderNav = ({setIsMobile,icon,setIcon}) => {
+const HeaderNav = ({ setIsMobile, icon, setIcon }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
- 
-
-  const ico = icon ? faXmark : faBars; 
+  const ico = icon ? faXmark : faBars;
 
   const handleMenu = () => {
     setIsMobile((prev) => !prev);
     setIcon(!icon);
   };
 
-  const handleMouseEnter = (index) => {
-    setActiveDropdown(index);
-  };
-
-  const handleMouseLeave = () => {
-    setActiveDropdown(null);
-  };
-
   return (
-    <div className="max-w-screen-lg flex items-center gap-5">
-      {NavigationData.map((item, index) => {
-        return (
+    <nav className="max-w-screen-lg ml-auto">
+      <div className="flex items-center justify-end gap-8">
+        {NavigationData.map((item, index) => (
           <motion.div
-          initial={{ opacity: 0, x: -23 }}
-          animate={{ opacity: 1, x: 0 }}
-            id="navItems"
-            className="relative py-7 h-full hidden lg:flex"
             key={index}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
+            className="hidden lg:block relative group"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
           >
             <Link
               to={item.path}
-              className="text-black self-start text-sm uppercase font-semibold cursor-pointer"
+              className="py-6 inline-flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors"
             >
-              <span
-                className="hover:text-blue-500 peer"
-              >
-                {item.title}{" "}
-                {item.dropDown && <FontAwesomeIcon icon={faCaretDown} />}
-              </span>
+              <span className="text-sm font-medium">{item.title}</span>
+              {item.dropDown && (
+                <FontAwesomeIcon
+                  icon={faCaretDown}
+                  className="text-xs transition-transform group-hover:rotate-180"
+                />
+              )}
             </Link>
-            {item.dropDown && activeDropdown === index && (
-              <motion.div   
-                id="dropDown"
+
+            {item.dropDown && (
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute w-50 top-18 left-0 bg-[var(--bg-main-colour)] shadow-lg rounded-md p-2 flex flex-col gap-5  angled-corner"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
+                className="absolute invisible group-hover:visible bg-white rounded-lg shadow-xl p-4 w-56 top-full"
               >
-                {item.dropDown.map((subItem, subIndex) => {
-                  return (
+                <div className="flex flex-col gap-2">
+                  {item.dropDown.map((subItem, subIndex) => (
                     <Link
-                      to={subItem.path}
                       key={subIndex}
-                      className="group block w-full ml-2 text-sm relative text-white py-1 px-2 "
+                      to={subItem.path}
+                      className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all"
                     >
+                      <span>{subItem.title}</span>
                       <FontAwesomeIcon
                         icon={faArrowRight}
-                        className="absolute transition-transform group-hover:translate-x-6 group-hover:opacity-100 opacity-0 right-10 bottom-0 transform -translate-y-1/2"
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
                       />
-                      {subItem.title}
                     </Link>
-                  );
-                })}
+                  ))}
+                </div>
               </motion.div>
             )}
           </motion.div>
-        );
-      })}
-      <div onClick={handleMenu} className="block lg:hidden cursor-pointer p-3 rounded-4xl">
-        <FontAwesomeIcon icon={ico} className="text-black text-2xl" />
+        ))}
+
+        <button
+          onClick={handleMenu}
+          className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+        >
+          <FontAwesomeIcon icon={ico} className="text-xl" />
+        </button>
       </div>
-    </div>
+    </nav>
   );
 };
 

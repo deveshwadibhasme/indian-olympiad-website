@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleDown, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const FAQ = () => {
   useEffect(() => {
@@ -51,9 +52,15 @@ const FAQ = () => {
   return (
     <section className="w-full flex-center min-h-screen py-5 px-4 bg-gradient-to-b from-gray-50 to-gray-100">
       <div className="max-w-4xl w-full mx-auto">
-        <h1 className="text-3xl md:text-4xl text-shade-blue-light text-center font-bold mb-12">
-          Frequently Asked Questions
-        </h1>
+      <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, type: "spring" }}
+          className="text-3xl md:text-6xl font-bold text-center my-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+        >
+          <FontAwesomeIcon icon={faQuestionCircle} className="text-amber-400 mr-3" />
+          Frequenlty Asked Questions
+        </motion.h1>
 
         <div className="space-y-4">
           {schoolQA.map((qa, index) => (

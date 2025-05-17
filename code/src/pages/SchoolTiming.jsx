@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSwatchbook} from "@fortawesome/free-solid-svg-icons";
 
 const SchoolTiming = () => {
   useEffect(() => {
@@ -17,10 +19,15 @@ const SchoolTiming = () => {
       className="container p-4 w-full min-h-screen mb-10 mx-auto bg-gradient-to-b from-slate-50 to-white"
     >
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-4xl mt-2 mb-12 text-blue-600 text-center font-bold relative">
-          School Timings
-          <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-600 mt-2"></div>
-        </h1>
+        <motion.h1
+                  initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, type: "spring" }}
+                  className="text-5xl md:text-6xl font-bold text-center my-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+                >
+                  <FontAwesomeIcon icon={faSwatchbook} className="text-amber-400 mr-3" />
+                  School Timing
+                </motion.h1>
 
         <div className="grid md:grid-cols-2 gap-8 p-4">
           <motion.div 

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import activityCalender from "../data/activity-calender";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar, faTrophy } from "@fortawesome/free-solid-svg-icons";
 
 const ActivityCalender = () => {
   useEffect(() => {
@@ -41,9 +43,15 @@ const ActivityCalender = () => {
 
   return (
     <section className="w-full flex-center min-h-screen h-full  flex-col relative mx-auto bg-gray-100">
-        <h1 className="text-2xl md:mt-2 md:text-heading relative hori-strip after:top-10 md:after:top-17 text-shade-blue-light text-center font-bold">
-          Activity Calender
-        </h1>
+        <motion.h1
+                 initial={{ opacity: 0, y: -50 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 1, type: "spring" }}
+                 className="text-5xl md:text-6xl font-bold text-center mb-16 my-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+               >
+                 <FontAwesomeIcon icon={faCalendar} className="text-amber-400 mr-5" />
+               Activity Calender
+               </motion.h1>
       <div className="max-w-screen-xl w-full mx-auto mt-5 p-2">
         <motion.div
           className="overflow-x-auto w-full shadow-md rounded-lg"

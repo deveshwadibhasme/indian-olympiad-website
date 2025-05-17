@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import TransportRoutes from "../data/transport-routes";
 import { motion, AnimatePresence } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBus } from "@fortawesome/free-solid-svg-icons";
 
 const TransportPage = () => {
   const [currentIndex, setcurrentIndex] = useState(0);
@@ -38,12 +40,18 @@ const TransportPage = () => {
           animate={{ opacity: 1, transition: { duration: 0.5 } }}
           exit={{ opacity: 0 }}
           onClick={handleIndexZero}
-          className="w-full flex-center min-h-screen py-10 h-full flex-col relative mx-auto bg-gray-50"
+          className="w-full flex-center min-h-screen py-5 h-full flex-col relative mx-auto bg-gray-50"
         >
-          <h1 className="text-3xl md:text-4xl relative hori-strip after:top-10 md:after:top-14 text-shade-blue-light text-center font-bold mb-6">
-            Route Wise Transport
-          </h1>
-          <p className="max-w-screen-lg text-center mx-auto mt-4 text-gray-600 text-lg">
+          <motion.h1
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, type: "spring" }}
+                    className="text-4xl md:text-6xl font-bold text-center my-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+                  >
+                    <FontAwesomeIcon icon={faBus} className="text-amber-400 mr-3" />
+                    Routes Wise Transport
+                  </motion.h1>
+          <p className="max-w-sm text-center mx-auto mt-4 text-gray-600 text-lg">
             ROUTEWISE TRANSPORT FACILITY : 2022-2023
             <span className="block text-sm text-gray-500 mt-2">(Click to Expand)</span>
           </p>
