@@ -33,7 +33,7 @@ const MobileNav = ({ isMobile, setIsMobile, setIcon }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "100%" }}
           transition={{ type: "tween", stiffness: 100 }}
-          className="fixed inset-0 bg-gradient-to-b from-white to-shade-blue-light/10 backdrop-blur-sm flex md:hidden flex-col items-center pt-20 px-3 z-50"
+          className="fixed inset-0 bg-gradient-to-b from-white to-shade-blue-light/10 backdrop-blur-sm flex lg:hidden flex-col items-center pt-20 px-3 z-50"
         >
           {NavigationData.map((item, index) => (
             <motion.div

@@ -43,7 +43,7 @@ const TopperCard = () => (
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        SSC Toppers
+        CBSE X Toppers
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {sscToppers.map((topper, i) => (
@@ -61,7 +61,7 @@ const TopperCard = () => (
             <img
               src={getImageLink(topper.image)}
               alt={topper.name}
-              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-200 shadow-lg"
+              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover object-top border-4 border-blue-200 shadow-lg"
             />
             <div className="text-center z-10 relative">
               <h3 className="text-xl font-bold text-indigo-900 mb-2">
@@ -84,7 +84,7 @@ const TopperCard = () => (
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        HSC Toppers
+        CBSE XII Toppers
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
         {hscToppers.map((topper, i) => (
@@ -168,7 +168,7 @@ const TopperPage = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: "spring" }}
-          className="text-4xl md:text-6xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+          className="text-4xl lg:text-6xl font-bold text-center md:mt-10 xl:mt-0 mb-8 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
         >
           <FontAwesomeIcon icon={faTrophy} className="text-amber-400 mr-3" />
           Our Achievers
@@ -176,7 +176,7 @@ const TopperPage = () => {
 
         <TopperCard />
 
-        <motion.h1
+       { alumni.length !== 0 && <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, type: "spring" }}
@@ -187,10 +187,10 @@ const TopperPage = () => {
             className="text-blue-600 mr-3"
           />
           Notable Alumni
-        </motion.h1>
-
+        </motion.h1> 
+}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {alumni.map((alum, i) => (
+          {alumni.length !== 0 && alumni.map((alum, i) => (
             <AlumniCard key={i} alumni={alum} index={i} />
           ))}
         </div>
