@@ -15,10 +15,10 @@ export default [
                 title: `Message From Director's Desk`,
                 path: '/directors-desk'
             },
-            {
-                title: `Message From Principle's Desk`,
-                path: '/principal-desk'
-            },
+            // {
+            //     title: `Message From Principle's Desk`,
+            //     path: '/principal-desk'
+            // },
             {
                 title: `Infrastructure`,
                 path: '/infrastructure'
@@ -100,8 +100,8 @@ export default [
         path: '/cbse',
     },
     {
-        title:'Carrer',
-        path: '/carrer',
+        title:'Careers',
+        path: '/careers',
     },
     {
         title:'Contact Us',

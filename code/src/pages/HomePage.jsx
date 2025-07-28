@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import introVideo from "../assets/sample-ios.mp4";
+import introVideo from "../assets/sample-ios-1.mp4";
 import WelcomePage from "../layouts/WelcomePage";
 import Branches from "../layouts/Branches";
 import WhyCBSE from "../layouts/WhyCBSE";

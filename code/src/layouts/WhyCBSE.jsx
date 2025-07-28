@@ -1,4 +1,9 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCalendarAlt, faChalkboardTeacher, faClipboardList,
+  faBullseye, faTrophy, faClock
+} from '@fortawesome/free-solid-svg-icons';
 
 const WhyCBSE = () => {
   return (
@@ -8,23 +13,13 @@ const WhyCBSE = () => {
           Why We Are Best CBSE Schools in Nagpur
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Info Activity Calender */}
+
           <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
             <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
-              <svg
+              <FontAwesomeIcon
+                icon={faClock}
                 className="w-6 h-6 text-green-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Info Activity Calender
@@ -35,23 +30,13 @@ const WhyCBSE = () => {
             </p>
           </div>
 
-          {/* Activity Calendar 2022-2023 */}
+
           <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
             <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
-              <svg
+              <FontAwesomeIcon
+                icon={faCalendarAlt}
                 className="w-6 h-6 text-green-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Activity Calendar
@@ -62,23 +47,13 @@ const WhyCBSE = () => {
             </p>
           </div>
 
-          {/* Advanced Teaching Faculty */}
+
           <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
             <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
-              <svg
+              <FontAwesomeIcon
+                icon={faChalkboardTeacher}
                 className="w-6 h-6 text-green-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.523 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5S18.832 5.477 20 6.253v13C18.832 18.523 17.246 18 15.5 18s-3.332.477-4.5 1.253"
-                />
-              </svg>
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Advanced Teaching Faculty
@@ -89,23 +64,12 @@ const WhyCBSE = () => {
             </p>
           </div>
 
-          {/* Adavanced Study Plans */}
           <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
             <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
-              <svg
+              <FontAwesomeIcon
+                icon={faClipboardList}
                 className="w-6 h-6 text-green-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M7 8h10M7 12h4m14-4l-3-3m0 6l-3 3"
-                />
-              </svg>
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Adavanced Study Plans
@@ -116,23 +80,13 @@ const WhyCBSE = () => {
             </p>
           </div>
 
-          {/* Focus On Target */}
+
           <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
             <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
-              <svg
+              <FontAwesomeIcon
+                icon={faBullseye}
                 className="w-6 h-6 text-green-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9-9h3m-3 9h3m-3-3h3"
-                />
-              </svg>
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Focus On Target
@@ -143,23 +97,12 @@ const WhyCBSE = () => {
             </p>
           </div>
 
-          {/* Focus On Success */}
           <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
             <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
-              <svg
+              <FontAwesomeIcon
+                icon={faTrophy}
                 className="w-6 h-6 text-green-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2z"
-                />
-              </svg>
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Focus On Success

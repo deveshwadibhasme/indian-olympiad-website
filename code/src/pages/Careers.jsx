@@ -92,7 +92,7 @@ const Careers = () => {
                  className="text-4xl md:text-6xl font-bold text-center mb-6 w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
                >
                  <FontAwesomeIcon icon={faUserGraduate} className="text-amber-400 mr-3" />
-                 Carrer in Indian Olympiad School
+                 Careers in Indian Olympiad School
                </motion.h1>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10"
