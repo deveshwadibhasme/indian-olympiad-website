@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faSchoolFlag } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import getImageLink from "../utils/getImage";
 
 const Cbse = () => {
 
@@ -28,24 +29,24 @@ const Cbse = () => {
       }, []);
 
     const cbseInfo = [
-        { title: "Affiliation Letter I-XII", link: "/not-available" },
+        { title: "Affiliation Letter I-XII", link: getImageLink('/assets-pdf/affiliation-letter.pdf') },
         { title: "Annual Planning 2023", link: "/not-available" },
-        { title: "Building Safety Certificate", link: "/not-available" },
-        { title: "Deo Letter", link: "/not-available" },
-        { title: "Annual Planning 2023", link: "/not-available" },
-        { title: "Building Safety Certificate", link: "/not-available" },
-        { title: "Affiliation Letter I-XII", link: "/not-available" },
-        { title: "Annual Planning 2023", link: "/not-available" },
-        { title: "Building Safety Certificate", link: "/not-available" },
-        { title: "Affiliation Letter I-XII", link: "/not-available" },
-        { title: "Annual Planning 2023", link: "/not-available" },
-        { title: "Building Safety Certificate", link: "/not-available" },       
-        { title: "Affiliation Letter I-XII", link: "/not-available" },
-        { title: "Annual Planning 2023", link: "/not-available" },
-        { title: "Building Safety Certificate", link: "/not-available" },
-        { title: "Affiliation Letter I-XII", link: "/not-available" },
-        { title: "Annual Planning 2023", link: "/not-available" },
-        { title: "Building Safety Certificate", link: "/not-available" },
+        // { title: "Building Safety Certificate", link: "/not-available" },
+        { title: "Deo Letter", link: getImageLink('/assets-pdf/deo-letter.pdf') },
+        // { title: "Annual Planning 2023", link: "/not-available" },
+        { title: "Building Safety Certificate", link:  getImageLink('/assets-pdf/building-safety-certificate.pdf') },
+        { title: "Land Certificate", link: getImageLink('/assets-pdf/land-certificate.pdf') },       
+        // { title: "Affiliation Letter I-XII", link: "/not-available" },
+        { title: "Sanetary Certificate", link: getImageLink('/assets-pdf/sanitary-certificate.pdf') },   
+        { title: "Fire Safety Certificate", link: getImageLink('/assets-pdf/fire-certificate.jpg') },
+        { title: "Water Safety Letter", link: getImageLink('/assets-pdf/safe-drinking-water.pdf') },
+        { title: "NoC Maharashtra Gov", link: getImageLink('/assets-pdf/noc-maharashtra-gov.pdf') },
+        // { title: "Annual Planning 2023", link: "/not-available" },
+        // { title: "Annual Planning 2023", link: "/not-available" },
+        // { title: "Building Safety Certificate", link: "/not-available" },
+        // { title: "Affiliation Letter I-XII", link: "/not-available" },
+        // { title: "Annual Planning 2023", link: "/not-available" },
+        // { title: "Building Safety Certificate", link: "/not-available" },
     ];
 
 return (
@@ -62,14 +63,14 @@ return (
         
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 mt-5">
             {cbseInfo.map((item, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-4 flex items-center justify-between">
+                <motion.div whileHover={{scale:1.1}} key={index} className="bg-white cursor-pointer rounded-lg shadow-md p-4 flex items-center justify-between">
                     <span className="text-blue-500 hover:text-blue-700">
                         {item.title}
                     </span>
-                    <a href={item.link} className="text-gray-500 hover:text-gray-700" download>
+                    <a href={item.link} target="_blank" className="text-gray-500 hover:text-gray-700" download>
                         <FontAwesomeIcon icon={faDownload} />
                     </a>
-                </div>
+                </motion.div>
             ))}
         </div>
     </section>

@@ -7,7 +7,6 @@ import WhyCBSE from "../layouts/WhyCBSE";
 import StatsBanner from "../layouts/StatsBanner";
 
 const HomePage = () => {
-
   useEffect(() => {
     document.title = "Indian Olympiad School - Home";
     const metaDescription = document.querySelector("meta[name='description']");
@@ -33,7 +32,14 @@ const HomePage = () => {
   return (
     <>
       <section className="w-full mx-auto bg-white relative shaded-bg">
-        <video width={'1080px'} height={'720px'} autoPlay  loop muted className="lg:w-full relative h-full md:h-auto">
+        <video
+          width={"1080px"}
+          height={"720px"}
+          autoPlay
+          loop
+          muted
+          className="lg:w-full relative h-full md:h-auto"
+        >
           <source src={introVideo} type="video/mp4" />
         </video>
         <motion.div
@@ -43,15 +49,15 @@ const HomePage = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
         >
-        <motion.h1
-          className=" text-white -translate-y-1/2 text-2xl md:text-heading text-shadow-[0px_4px_10px] text-shadow-black font-semibold left-2 md:left-15 w-70 md:w-110 z-10"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          We Enter to Learn Leave to Achieve
-        </motion.h1>
+          <motion.h1
+            className=" text-white -translate-y-1/2 text-2xl md:text-heading text-shadow-[0px_4px_10px] text-shadow-black font-semibold left-2 md:left-15 w-70 md:w-110 z-10"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            We Enter to Learn Leave to Achieve
+          </motion.h1>
           <button className="flex items-center bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium hover:bg-shade-blue-light transition duration-300 cursor-pointer">
             Explore More
             <span className="ml-2">&rarr;</span>
@@ -59,8 +65,8 @@ const HomePage = () => {
         </motion.div>
       </section>
       <WelcomePage />
-      <WhyCBSE/>
-      <StatsBanner/>
+      <WhyCBSE />
+      <StatsBanner />
       <Branches />
     </>
   );
