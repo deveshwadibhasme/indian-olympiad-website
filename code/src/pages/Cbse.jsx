@@ -31,22 +31,13 @@ const Cbse = () => {
     const cbseInfo = [
         { title: "Affiliation Letter I-XII", link: getImageLink('/assets-pdf/affiliation-letter.pdf') },
         { title: "Annual Planning 2023", link: "/not-available" },
-        // { title: "Building Safety Certificate", link: "/not-available" },
         { title: "Deo Letter", link: getImageLink('/assets-pdf/deo-letter.pdf') },
-        // { title: "Annual Planning 2023", link: "/not-available" },
         { title: "Building Safety Certificate", link:  getImageLink('/assets-pdf/building-safety-certificate.pdf') },
         { title: "Land Certificate", link: getImageLink('/assets-pdf/land-certificate.pdf') },       
-        // { title: "Affiliation Letter I-XII", link: "/not-available" },
-        { title: "Sanetary Certificate", link: getImageLink('/assets-pdf/sanitary-certificate.pdf') },   
-        { title: "Fire Safety Certificate", link: getImageLink('/assets-pdf/fire-certificate.jpg') },
+        { title: "Sanitary Certificate", link: getImageLink('/assets-pdf/sanetary-certificate.pdf') },   
+        { title: "Fire Safety Certificate", link: getImageLink('/assets-pdf/fire-safety-certificate.pdf') },
         { title: "Water Safety Letter", link: getImageLink('/assets-pdf/safe-drinking-water.pdf') },
         { title: "NoC Maharashtra Gov", link: getImageLink('/assets-pdf/noc-maharashtra-gov.pdf') },
-        // { title: "Annual Planning 2023", link: "/not-available" },
-        // { title: "Annual Planning 2023", link: "/not-available" },
-        // { title: "Building Safety Certificate", link: "/not-available" },
-        // { title: "Affiliation Letter I-XII", link: "/not-available" },
-        // { title: "Annual Planning 2023", link: "/not-available" },
-        // { title: "Building Safety Certificate", link: "/not-available" },
     ];
 
 return (
