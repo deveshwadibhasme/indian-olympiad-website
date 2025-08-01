@@ -27,7 +27,7 @@ const Footer = () => {
           <ul className="mt-4 space-y-2 text-sm">
             <li><a href="/infrastructure" className="hover:underline">Infrastructure</a></li>
             <li><a href="/labs" className="hover:underline">Labs</a></li>
-            <li><a href="/carrer" className="hover:underline">Career</a></li>
+            <li><a href="/careers" className="hover:underline">Career</a></li>
             <li><a href="/fee-structure" className="hover:underline">Fee Structure</a></li>
             <li><a href="/admission-guidelines" className="hover:underline">Admission Guidelines</a></li>
           </ul>
@@ -57,7 +57,7 @@ const Footer = () => {
             <a href="#" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="#" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
+            <a href="https://www.instagram.com/ios_nagpur/" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
               <FontAwesomeIcon icon={faInstagram} />
             </a>          
             <a href="#" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">

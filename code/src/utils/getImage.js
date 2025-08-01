@@ -1,10 +1,10 @@
 
-const getImageLink = (image) => {
+const getImageLink = (path) => {
     return (
-        location.hostname === "localhost" ? `https://ios.anicomic.in${image}` :
+        location.hostname === "localhost" ? `https://indianolympiadschool.com${path}` :
             location.hostname === "indian-olympiad-website.vercel.app" ?
-                `https://ios.anicomic.in${image}`
-                : location.origin + image
+                `https://ios.anicomic.in${path}`
+                : location.origin + path
     );
 }
 

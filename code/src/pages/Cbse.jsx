@@ -30,7 +30,7 @@ const Cbse = () => {
 
     const cbseInfo = [
         { title: "Affiliation Letter I-XII", link: getImageLink('/assets-pdf/affiliation-letter.pdf') },
-        { title: "Annual Planning 2023", link: "/not-available" },
+        { title: "Annual Planning", link: getImageLink('/assets-pdf/academic-calender.pdf') },
         { title: "Deo Letter", link: getImageLink('/assets-pdf/deo-letter.pdf') },
         { title: "Building Safety Certificate", link:  getImageLink('/assets-pdf/building-safety-certificate.pdf') },
         { title: "Land Certificate", link: getImageLink('/assets-pdf/land-certificate.pdf') },       
@@ -38,6 +38,7 @@ const Cbse = () => {
         { title: "Fire Safety Certificate", link: getImageLink('/assets-pdf/fire-safety-certificate.pdf') },
         { title: "Water Safety Letter", link: getImageLink('/assets-pdf/safe-drinking-water.pdf') },
         { title: "NoC Maharashtra Gov", link: getImageLink('/assets-pdf/noc-maharashtra-gov.pdf') },
+        { title: "PTA", link: getImageLink('/assets-pdf/parent-teacher.pdf') },
     ];
 
 return (
@@ -55,10 +56,10 @@ return (
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 mt-5">
             {cbseInfo.map((item, index) => (
                 <motion.div whileHover={{scale:1.1}} key={index} className="bg-white cursor-pointer rounded-lg shadow-md p-4 flex items-center justify-between">
-                    <span className="text-blue-500 hover:text-blue-700">
+                    <a href={item.link} target="_blank" className="text-blue-500 hover:text-blue-700">
                         {item.title}
-                    </span>
-                    <a href={item.link} target="_blank" className="text-gray-500 hover:text-gray-700" download>
+                    </a>
+                    <a href={item.link} target="_blank" className="text-gray-500 hover:text-gray-700">
                         <FontAwesomeIcon icon={faDownload} />
                     </a>
                 </motion.div>
