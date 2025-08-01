@@ -4,9 +4,9 @@ import welcomeImage from "../assets/ios-welcome.jpg";
 
 const WelcomePage = () => {
     return (
-        <div className="w-full min-h-120 flex items-center justify-center bg-white pt-5">
+        <div className="w-full min-h-80 flex items-center justify-center pt-5">
             <motion.div
-                className="max-w-screen text-center w-full mt-20"
+                className="max-w-screen text-center w-full mt-5"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}

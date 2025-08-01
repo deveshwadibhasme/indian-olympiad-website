@@ -24,13 +24,13 @@ const DirectorCTA = ({ className = "" }) => {
           className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer group"
           onClick={handleDirectorClick}
           whileHover={{ y: -8, scale: 1.02 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
         >
           <div className="flex flex-col md:flex-row items-center">
             <motion.div
               className="w-full md:w-2/5 relative overflow-hidden"
               whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.1 }}
             >
               <img
                 loading="lazy"
@@ -48,7 +48,7 @@ const DirectorCTA = ({ className = "" }) => {
                 className="inline-flex items-center px-4 py-2 bg-shade-blue-light bg-opacity-10 text-shade-blue-light rounded-full text-sm font-semibold mb-4"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.1, delay: 0.2 }}
               >
                 <span className="text-white bg-shade-blue-light rounded-full mr-2">
                   Go to Director Desk
@@ -58,7 +58,7 @@ const DirectorCTA = ({ className = "" }) => {
                 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 group-hover:text-shade-blue-light transition-colors duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.1, delay: 0.3 }}
               >
                 A Message from Our Director
               </motion.h2>
@@ -66,7 +66,7 @@ const DirectorCTA = ({ className = "" }) => {
                 className="text-gray-600 text-base md:text-lg leading-relaxed mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.1, delay: 0.4 }}
               >
                 "Our aim is to create an institute that helps prepare kids not
                 only for their school exams, but also for their future. We
@@ -77,7 +77,7 @@ const DirectorCTA = ({ className = "" }) => {
                 className="flex items-center justify-between"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                transition={{ duration: 0.1, delay: 0.5 }}
               >
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800">

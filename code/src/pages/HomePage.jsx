@@ -6,8 +6,11 @@ import Branches from "../layouts/Branches";
 import WhyCBSE from "../layouts/WhyCBSE";
 import StatsBanner from "../layouts/StatsBanner";
 import DirectorCTA from "../layouts/DirectorCTA";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
+
+
   useEffect(() => {
     document.title = "Indian Olympiad School - Home";
     const metaDescription = document.querySelector("meta[name='description']");
@@ -20,7 +23,7 @@ const HomePage = () => {
       const meta = document.createElement("meta");
       meta.name = "description";
       meta.content =
-        "Welcome to Indian Olympiad School, the best CBSE school in Nagpur. Explore our curriculum, infrastructure, and more.";
+        "Best cbse schools in nagpur look no further than Indian Olympiad Senior Secondary School (IOS). We are committed to providing a nurturing";
       document.head.appendChild(meta);
     }
 
@@ -39,7 +42,7 @@ const HomePage = () => {
           autoPlay
           loop
           muted
-          className="lg:w-full relative h-full md:h-auto"
+          className="lg:w-full relative h-80 md:h-auto object-cover"
         >
           <source src={introVideo} type="video/mp4" />
         </video>
@@ -51,7 +54,7 @@ const HomePage = () => {
           viewport={{ once: true }}
         >
           <motion.h1
-            className=" text-white -translate-y-1/2 text-2xl md:text-3xl text-shadow-[0px_4px_10px] text-shadow-black font-normal left-1/2 w-full max-w-screen z-10"
+            className=" text-white -translate-y-1/2 text-2xl md:text-3xl text-shadow-[0px_4px_10px] text-shadow-black -mb-6 font-normal left-1/2 w-full max-w-screen z-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -62,10 +65,14 @@ const HomePage = () => {
             </span>
             <br></br>We Enter to Learn Leave to Achieve
           </motion.h1>
-          {/* <button className="flex items-center bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium hover:bg-shade-blue-light transition duration-300 cursor-pointer">
-            Explore More
+          <Link to={"/admission-guidelines"} className=" bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium mr-5 hover:bg-shade-blue-light transition duration-300 cursor-pointer">
+            Admission
             <span className="ml-2">&rarr;</span>
-          </button> */}
+          </Link>
+          <Link to={"/contact-us"} className=" bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium hover:bg-shade-blue-light transition duration-300 cursor-pointer">
+            Contact Us
+            <span className="ml-2">&rarr;</span>
+          </Link>
         </motion.div>
       </section>
       <WelcomePage />

@@ -60,7 +60,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/ios_nagpur/" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
               <FontAwesomeIcon icon={faInstagram} />
             </a>          
-            <a href="#" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
+            <a href="https://www.linkedin.com/company/indianolympiadschool" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
             <a href="#" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
