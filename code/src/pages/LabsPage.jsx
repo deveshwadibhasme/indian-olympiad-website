@@ -2,7 +2,11 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import getImageLink from "../utils/getImage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faRegistered, faUserTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  faRegistered,
+  faUserTimes,
+} from "@fortawesome/free-solid-svg-icons";
 
 const LabsPage = () => {
   useEffect(() => {
@@ -13,6 +17,15 @@ const LabsPage = () => {
   }, []);
 
   const labData = [
+    {
+      title: "Physics Lab",
+      description:
+        "Our physics lab provides a dynamic environment for students to explore fundamental principles of physics through hands-on experiments and interactive demonstrations.",
+      images: [
+        "/assets-images/labphysics11.jpg",
+        "/assets-images/labphysics12.jpg",
+      ],
+    },
     {
       title: "Computer Lab",
       description:

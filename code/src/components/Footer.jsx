@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../assets/logo.png';
-import {faFacebook ,faInstagram ,faTwitter ,faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
+import {faFacebook ,faInstagram ,faTwitter ,faLinkedinIn, faYoutube} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
@@ -63,8 +63,8 @@ const Footer = () => {
             <a href="https://www.linkedin.com/company/indianolympiadschool" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
-            <a href="#" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
-              <FontAwesomeIcon icon={faTwitter} />
+            <a href="https://www.youtube.com/@ios_nagpur" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
+              <FontAwesomeIcon icon={faYoutube} />
             </a>
           </div>
         </div>

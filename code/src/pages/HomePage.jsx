@@ -7,6 +7,7 @@ import WhyCBSE from "../layouts/WhyCBSE";
 import StatsBanner from "../layouts/StatsBanner";
 import DirectorCTA from "../layouts/DirectorCTA";
 import { Link } from "react-router-dom";
+import FeaturedSection from "../layouts/FeaturedSection";
 
 const HomePage = () => {
 
@@ -54,7 +55,7 @@ const HomePage = () => {
           viewport={{ once: true }}
         >
           <motion.h1
-            className=" text-white -translate-y-1/2 text-2xl md:text-3xl text-shadow-[0px_4px_10px] text-shadow-black -mb-6 font-normal left-1/2 w-full max-w-screen z-10"
+            className=" text-white -translate-y-1/2 text-[22px] md:text-3xl text-shadow-[0px_4px_10px] text-shadow-black -mb-6 font-normal left-1/2 w-full max-w-screen z-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -77,6 +78,7 @@ const HomePage = () => {
       </section>
       <WelcomePage />
       <DirectorCTA/>
+      <FeaturedSection/>
       <WhyCBSE />
       <StatsBanner />
       <Branches />
