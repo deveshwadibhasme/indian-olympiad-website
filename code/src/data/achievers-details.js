@@ -154,6 +154,36 @@ export const sscToppers = [
   },
 ];
 
+export const achievers = [
+  {
+    name: "Umaid Khan",
+    image: "/assets-images/student-images/UMAID%20KHAN%20-%2095.60.jpg",
+    schoolInfo: "Student @IOS from Grade 8 to 12",
+    titles: "Vidarbha Topper | Maharashtra Rank 3 | AIR 21 NEET UG - AIIMS Nagpur",
+  },
+  {
+    name: "Devesh Kolte",
+    image: "/assets-images/student-images/Devesh-Kolte.jpg",
+    schoolInfo: "Student @IOS from Grade 11 to 12",
+    titles: "12th CBSE City Topper | 97.00% - XII CBSE City Topper | NEET AIR 915",
+  },
+  {
+    name: "Imas Asad",
+    image: "/assets-images/student-images/imas-asad.jpg",
+    schoolInfo: "Student @IOS from Grade 6 to 12",
+    titles: "#2 City Topper | JEE Advanced AIR 488 | JEE Main 2025 - 99.964%",
+  },
+  {
+    name: "Syed Atif",
+    image: "/assets-images/student-images/syed-atif.jpg",
+    schoolInfo: "Student @IOS from Grade 4 to 12",
+    titles: "#1 City Topper | JEE Advanced AIR 492 | JEE Main 2025 - 99.966%",
+  },
+];
+
+
+
+
 export const alumni = [
   // {
   //   name: "Rahul Kapoor",

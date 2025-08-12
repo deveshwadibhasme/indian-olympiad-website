@@ -56,7 +56,7 @@ const LabsPage = () => {
   ];
 
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-b from-slate-50 to-white py-5">
+    <section className="relative text-center w-full min-h-screen bg-gradient-to-b from-slate-50 to-white py-5">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
