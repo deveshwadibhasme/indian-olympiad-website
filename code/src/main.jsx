@@ -11,6 +11,7 @@ import DirectorPage from './pages/DirectorPage.jsx';
 import AdmissionProcedure from './pages/AddmissionProcedure.jsx';
 import TopperPage from './pages/TopperPage.jsx';
 import AchieversPage from './pages/AchieversPage.jsx';
+import RegistrationForm from './pages/RegistrationForm.jsx';
 
 const HomePage = React.lazy(() => import('./pages/HomePage.jsx'));
 const Error = React.lazy(() => import('./components/Error.jsx'));
@@ -96,6 +97,10 @@ const router = createBrowserRouter([
       {
         path:"/achievers",
         element:<AchieversPage />
+      },
+      {
+        path:"/online-registration",
+        element:<RegistrationForm />
       }
     ],
   },
