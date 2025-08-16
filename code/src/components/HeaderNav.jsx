@@ -71,7 +71,7 @@ const HeaderNav = ({ setIsMobile, icon, setIcon }) => {
 
         <button
           onClick={handleMenu}
-          className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          className="lg:hidden z-100 p-2 rounded-lg hover:bg-gray-100 transition-colors"
         >
           <FontAwesomeIcon icon={ico} className="text-xl" />
         </button>

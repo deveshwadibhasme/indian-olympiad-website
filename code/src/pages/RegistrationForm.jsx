@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faVenusMars, faCakeCandles, faBuilding, faEnvelope, faPhone, faSchool, faIdCard, faBook } from '@fortawesome/free-solid-svg-icons';
 
 const RegistrationForm = () => {
+
+  useEffect(() => {
+    document.title = "Registration Form - Indian Olympiad School";
+    const metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Register your child for admission at Indian Olympiad School. Fill out our online registration form with student and parent details."
+      );
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content =
+        "Register your child for admission at Indian Olympiad School. Fill out our online registration form with student and parent details.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
+   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();

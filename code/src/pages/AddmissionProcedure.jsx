@@ -114,12 +114,20 @@ const AddmissionProcedure = () => {
           </div>
         </div>
 
-        <Link 
-          to="/fee-structure"
-          className="block text-center mt-8 text-2xl text-blue-600 hover:text-blue-800 transition-colors duration-300"
-        >
-          View Fee Structure →
-        </Link>
+        <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
+          <Link 
+            to="/fee-structure"
+            className="block text-center px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-300 shadow-lg"
+          >
+            View Fee Structure
+          </Link>
+          <Link 
+            to="/online-registration"
+            className="block text-center px-6 py-3 bg-green-600 text-white rounded-full text-lg font-medium hover:bg-green-700 transition-colors duration-300 shadow-lg"
+          >
+            Online Registration
+          </Link>
+        </div>
       </motion.div>
     </section>
   );

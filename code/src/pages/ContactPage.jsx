@@ -6,11 +6,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faContactCard } from "@fortawesome/free-solid-svg-icons";
 
 const ContactPage = () => {
+
+
+
+
    useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
+    document.title = "Contact Us - Indian Olympiad School";
   }, []);
 
   const [dirChange, setdirChange] = useState(false);
