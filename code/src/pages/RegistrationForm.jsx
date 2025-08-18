@@ -45,8 +45,9 @@ const RegistrationForm = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: "spring" }}
-          className="text-4xl mt-10 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-8">
-              <FontAwesomeIcon icon={faBook} className="mr-2 text-yellow-500" />Student Registration
+          className="text-5xl mt-8 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-8">
+              {/* <FontAwesomeIcon icon={faBook} className="text-yellow-500 mr-2 invisible" /> */}
+              Student Registration
         </motion.h2>
       <motion.div 
         initial={{ opacity: 0, y: 20 }}

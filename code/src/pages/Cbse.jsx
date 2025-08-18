@@ -49,7 +49,7 @@ return (
           transition={{ duration: 1, type: "spring" }}
           className="text-5xl md:text-6xl font-bold text-center my-5 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
         >
-          <FontAwesomeIcon icon={faSchoolFlag} className="text-amber-400 mr-3" />
+          {/* <FontAwesomeIcon icon={faSchoolFlag} className="text-amber-400 invisible" /> */}
           CBSE Information
         </motion.h1>
         

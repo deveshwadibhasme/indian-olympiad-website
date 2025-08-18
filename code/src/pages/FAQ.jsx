@@ -58,7 +58,7 @@ const FAQ = () => {
           transition={{ duration: 1, type: "spring" }}
           className="text-3xl md:text-6xl font-bold text-center my-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
         >
-          <FontAwesomeIcon icon={faQuestionCircle} className="text-amber-400 mr-3" />
+          {/* <FontAwesomeIcon icon={faQuestionCircle} className="text-amber-400 invisible" /> */}
           Frequenlty Asked Questions
         </motion.h1>
 

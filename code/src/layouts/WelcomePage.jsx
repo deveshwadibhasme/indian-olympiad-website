@@ -12,21 +12,21 @@ const WelcomePage = () => {
                 transition={{ duration: 1 }}
             >
                 <motion.h1
-                    className="text-3xl md:text-4xl font-semibold text-amber-500"
+                    className="text-4xl md:text-6xl max-w-sm md:max-w-xl mx-auto relative after:top-25 md:after:top-35 font-bold hori-strip text-blue-700"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
                 >
-                    Welcome to Indian Olympiad School!
+                    Welcome to Indian Olympiad School
                 </motion.h1>
-                <motion.h3
-                    className="text-blue-700 text-4xl relative hori-strip after:top-33 md:text-5xl max-w-screen-md mx-auto font-semibold md:font-bold"
+                {/* <motion.h3
+                    className="text-blue-700 text-4xl  md:text-5xl max-w-screen-md mx-auto font-semibold md:font-bold"
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
                     An Outstanding Curriculum and CBSE School in Nagpur.
-                </motion.h3>
+                </motion.h3> */}
                 <motion.p
                     className="mt-8 max-w-280 w-full mx-auto text-gray-700 text-lg md:text-xl leading-relaxed"
                     initial={{ opacity: 0, y: 50 }}

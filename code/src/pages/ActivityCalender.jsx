@@ -49,7 +49,7 @@ const ActivityCalender = () => {
                  transition={{ duration: 1, type: "spring" }}
                  className="text-5xl md:text-6xl font-bold text-center mb-16 my-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
                >
-                 <FontAwesomeIcon icon={faCalendar} className="text-amber-400 mr-5" />
+                 <FontAwesomeIcon icon={faCalendar} className="text-amber-400 mr-5 invisible" />
                Activity Calender
                </motion.h1>
       <div className="max-w-screen-xl w-full mx-auto mt-5 p-2">

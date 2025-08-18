@@ -91,7 +91,7 @@ const Careers = () => {
                  transition={{ duration: 1, type: "spring" }}
                  className="text-4xl md:text-6xl font-bold text-center mb-6 w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
                >
-                 <FontAwesomeIcon icon={faUserGraduate} className="text-amber-400 mr-3" />
+                 {/* <FontAwesomeIcon icon={faUserGraduate} className="text-amber-400 invisible" /> */}
                  Careers in Indian Olympiad School
                </motion.h1>
         <motion.div

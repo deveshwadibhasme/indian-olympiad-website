@@ -75,7 +75,7 @@ const FeesStructure = () => {
           transition={{ duration: 1, type: "spring" }}
           className="text-5xl md:text-6xl font-bold text-center my-6 mb-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
         >
-          <FontAwesomeIcon icon={faMoneyBill} className="text-amber-400 mr-3" />
+          {/* <FontAwesomeIcon icon={faMoneyBill} className="text-amber-400 invisible" /> */}
           Fees Structure
         </motion.h1>
 

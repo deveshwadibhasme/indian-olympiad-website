@@ -70,7 +70,7 @@ const StatsBanner = () => {
                             <FontAwesomeIcon icon={faBook} className="text-2xl text-indigo-200" />
                         </div>
                         <div className="text-4xl font-extrabold tracking-tight">
-                            <Counter end={24} duration={1500} startCounting={startCounting} />
+                            <Counter end={15} duration={1500} startCounting={startCounting} />
                         </div>
                         <div className="text-lg text-indigo-300 font-semibold uppercase tracking-wider">
                             Courses
@@ -81,7 +81,7 @@ const StatsBanner = () => {
                             <FontAwesomeIcon icon={faGraduationCap} className="text-2xl text-indigo-200" />
                         </div>
                         <div className="text-4xl font-extrabold tracking-tight">
-                            <Counter end={745} duration={2000} startCounting={startCounting} />
+                            <Counter end={1000} duration={1000} startCounting={startCounting} />
                         </div>
                         <div className="text-lg text-indigo-300 font-semibold uppercase tracking-wider">
                             Student Enrolled
