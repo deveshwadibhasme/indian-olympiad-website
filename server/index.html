@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #1f1d1d;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #login-form,
+        #data-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="data-section" class="hidden">
+            <h2>Send Data</h2>
+            <form id="data-form">
+                <label for="text-data">Text:</label>
+                <textarea id="text-data" rows="4" required></textarea>
+                <button type="submit">Send Data</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const PREBUILT_PASSWORD = "password123";
+
+        const loginSection = document.getElementById('login-section');
+        const dataSection = document.getElementById('data-section');
+        const loginForm = document.getElementById('login-form');
+        const dataForm = document.getElementById('data-form');
+        const passwordInput = document.getElementById('password');
+        const textDataInput = document.getElementById('text-data');
+
+
+        const backendURL = ''
+        const localURL = 'http://localhost:3000'
+
+
+        async function verifyPassword(password) {
+            try {
+                const response = await fetch(`${localURL}/api/verify-password`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ password })
+                });
+                const data = await response.json();
+                return data.success;
+            } catch (error) {
+                console.error('Error verifying password:', error);
+                return false;
+            }
+        }
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const isPasswordCorrect = await verifyPassword(passwordInput.value);
+            if (isPasswordCorrect) {
+                loginSection.classList.add('hidden');
+                dataSection.classList.remove('hidden');
+            } else {
+                alert('Incorrect password.');
+            }
+        });
+
+
+        dataForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const text = textDataInput.value;
+            const date = new Date().toISOString();
+
+            try {
+                const response = await fetch(`${localURL}/api/send-data`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ text, date })
+                });
+
+                if (response.ok) {
+                    alert('Data sent successfully!');
+                    textDataInput.value = '';
+                } else {
+                    alert('Failed to send data.');
+                }
+            } catch (error) {
+                console.error('Error sending data:', error);
+                alert('An error occurred while sending data.');
+            }
+        });
+    </script>
+</body>
+
+</html>
