@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import introVideo from "../assets/sample-ios-1.mp4";
 import WelcomePage from "../layouts/WelcomePage";
+import NewsSection from "../layouts/NewsSection";
 import Branches from "../layouts/Branches";
 import WhyCBSE from "../layouts/WhyCBSE";
 import StatsBanner from "../layouts/StatsBanner";
@@ -77,6 +78,7 @@ const HomePage = () => {
         </motion.div>
       </section>
       <WelcomePage />
+      <NewsSection />
       <DirectorCTA/>
       <FeaturedSection/>
       <WhyCBSE />
