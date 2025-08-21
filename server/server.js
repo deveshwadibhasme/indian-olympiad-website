@@ -56,6 +56,34 @@ app.post('/api/send-data', async (req, res) => {
     }
 });
 
+app.put('/api/edit-text/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { text, date } = req.body;
+        const updatedData = await TextData.findByIdAndUpdate(id, { text, date }, { new: true });
+        if (!updatedData) {
+            return res.status(404).send('Data not found');
+        }
+        res.status(200).send('Data updated successfully');
+    } catch (error) {
+        res.status(500).send('Error updating data');
+    }
+});
+
+app.delete('/api/delete-text/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deletedData = await TextData.findByIdAndDelete({ _id: id });
+        if (!deletedData) {
+            return res.status(404).send('Data not found');
+        }
+        res.status(200).send('Data deleted successfully');
+    } catch (error) {
+        res.status(500).send('Error deleting data');
+    }
+});
+
+
 app.get('/api/get-data', async (req, res) => {
     try {
         const data = await TextData.find();
