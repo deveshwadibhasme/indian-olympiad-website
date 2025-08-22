@@ -17,8 +17,10 @@ const NewsSection = () => {
         const data = await response.json();
         setNews(data);
         if (data.length === 0) {
-          setNews([{ text: "Stay Tuned for new updates" }]);
-          console.log("object");
+          setNews([
+            { text: "Stay Tuned for new updates!!", date: new Date().toISOString()},
+          ]);
+          // console.log("object");
         }
       } catch (error) {
         console.error("Error fetching news:", error);
@@ -29,19 +31,21 @@ const NewsSection = () => {
   }, []);
 
   const settings = {
-    dots: false,
     infinite: true,
     speed: 7000,
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: "linear",
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
+    variableWidth: true, 
+    arrows: false,
+    dots: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
       {
@@ -61,7 +65,10 @@ const NewsSection = () => {
       </h2>
       <Slider {...settings}>
         {news.map((item, index) => (
-          <div key={index} className="px-2 my-2 h-full max-w-sm w-full flex-1 flex-shrink-0">
+          <div
+            key={index}
+            className="px-2 my-2 h-full max-w-sm w-full flex-1 flex-shrink-0"
+          >
             <div className="bg-white border-2 border-gray-200 rounded-lg shadow-md px-6 py-6 flex flex-col h-full transition-transform duration-300 hover:scale-105 w-full">
               <p className="text-gray-800 flex-grow h-20 overflow-y-auto whitespace-normal break-words">
                 {item.text}

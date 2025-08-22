@@ -1,14 +1,24 @@
 @import "tailwindcss";
 
 @layer base {
-
   /* *{
     border: 1px solid #c93600;
   } */
 
-  #root{
-    font-family: 'Work Sans', sans-serif;
+  #root {
+    font-family: "Work Sans", sans-serif;
     @apply w-full flex flex-col gap-0 min-h-screen max-w-screen;
+  }
+
+  .slick-slide {
+    /* margin: 0 auto; */
+    width: auto !important; /* Let content decide */
+    min-width: 250px; /* Or whatever slide width you want */
+    display: block !important;
+  }
+  .slick-track {
+    margin: 0 auto;
+    display: flex !important;
   }
 
   .partition-line::after {
@@ -21,19 +31,19 @@
     background: #ffffff;
   }
 
-  .shaded-bg::after{
-    content: '';
+  .shaded-bg::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     backdrop-filter: blur(2px);
-    background-color: rgba(63, 41, 41, 0.404); 
+    background-color: rgba(63, 41, 41, 0.404);
   }
 
-  .hori-strip::after{
-    content: '';
+  .hori-strip::after {
+    content: "";
     position: absolute;
     bottom: -50px;
     left: 50%;
@@ -43,15 +53,14 @@
     background-color: blue;
   }
 
-
-  .angled-corner::after{
-    content: '';
+  .angled-corner::after {
+    content: "";
     position: absolute;
     top: -35px;
     left: -1px;
     height: 40px;
     width: 35px;
-    border-bottom-left-radius: 6px ;
+    border-bottom-left-radius: 6px;
     background-color: var(--color-shade-blue-light);
     clip-path: polygon(49% 51%, 0% 100%, 100% 100%);
     z-index: 1;
@@ -65,12 +74,11 @@
     content: "";
     @apply bg-shade-blue-light text-white shadow-md h-full absolute top-0 w-[50%] transition-all rounded-xl z-0 right-1/2;
   }
-
 }
 
 @theme {
-    --color-shade-blue: #00274a;
-    --color-shade-blue-light: #155dfc;
-    --bg-main-colour:#155dfc;
-    --text-heading: 48px;
+  --color-shade-blue: #00274a;
+  --color-shade-blue-light: #155dfc;
+  --bg-main-colour: #155dfc;
+  --text-heading: 48px;
 }
