@@ -11,10 +11,9 @@ import { Link } from "react-router-dom";
 import FeaturedSection from "../layouts/FeaturedSection";
 
 const HomePage = () => {
-
-
   useEffect(() => {
-    document.title = "Indian Olympiad School - Home";
+    document.title =
+      "Best CBSE Schools In Nagpur | Indian Olympaid School Nagpur";
     const metaDescription = document.querySelector("meta[name='description']");
     if (metaDescription) {
       metaDescription.setAttribute(
@@ -49,38 +48,46 @@ const HomePage = () => {
           <source src={introVideo} type="video/mp4" />
         </video>
         <motion.div
-          className="absolute top-1/2 mt-8 lg:mt-0 text-center lg:top-1/3 w-full mx-auto -translate-y-1/2 -translate-x-1/2 left-1/2 md:left-1/2 z-10"
+          className="absolute top-1/2 mt-8 lg:mt-0 text-center lg:top-1/3 w-full mx-auto -translate-y-1/2 -translate-x-1/2 left-1/2 md:left-1/2 z-10 flex flex-col items-center justify-center gap-7"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
         >
           <motion.h1
-            className=" text-white -translate-y-1/2 text-[22px] md:text-3xl text-shadow-[0px_4px_10px] text-shadow-black -mb-6 font-normal left-1/2 w-full max-w-screen z-10"
+            className="block text-3xl md:text-7xl lg:text-8xl text-white font-bold left-1/2 w-full max-w-screen z-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="block -mb-5 text-3xl md:text-7xl lg:text-8xl text-white font-bold">
-              Indian Olympiad School
-            </span>
-            <br></br>We Enter to Learn Leave to Achieve
+            Indian Olympiad School
           </motion.h1>
-          <Link to={"/admission-guidelines"} className=" bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium mr-5 hover:bg-shade-blue-light transition duration-300 cursor-pointer">
-            Admission
-            <span className="ml-2">&rarr;</span>
-          </Link>
-          <Link to={"/contact-us"} className=" bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium hover:bg-shade-blue-light transition duration-300 cursor-pointer">
-            Contact Us
-            <span className="ml-2">&rarr;</span>
-          </Link>
+          <span className="text-white -translate-y-1/2 text-[22px] md:text-3xl text-shadow-[0px_4px_10px] text-shadow-black mb-2 font-normal ">
+            We Enter to Learn Leave to Achieve
+          </span>
+          <div>
+            <Link
+              to={"/admission-guidelines"}
+              className=" bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium mr-5 hover:bg-shade-blue-light transition duration-300 cursor-pointer"
+            >
+              Admission
+              <span className="ml-2">&rarr;</span>
+            </Link>
+            <Link
+              to={"/contact-us"}
+              className=" bg-white text-black px-6 py-3 rounded-full text-sm md:text-lg font-medium hover:bg-shade-blue-light transition duration-300 cursor-pointer"
+            >
+              Contact Us
+              <span className="ml-2">&rarr;</span>
+            </Link>
+          </div>
         </motion.div>
       </section>
       <WelcomePage />
       <NewsSection />
-      <DirectorCTA/>
-      <FeaturedSection/>
+      <DirectorCTA />
+      <FeaturedSection />
       <WhyCBSE />
       <StatsBanner />
       <Branches />

@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-6">
-            <a href="#" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
+            <a href="https://www.facebook.com/indianolympiadschool/" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
             <a href="https://www.instagram.com/ios_nagpur/" className="w-8 h-8 bg-white text-[#003366] rounded-full flex items-center justify-center hover:bg-gray-200">
