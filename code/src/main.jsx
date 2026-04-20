@@ -1,28 +1,33 @@
-import React from 'react';
+import React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import "./index.css";
 import App from "./App.jsx";
-import SchoolTiming from './pages/SchoolTiming.jsx';
-import FAQ from './pages/FAQ.jsx';
-import Cbse from './pages/Cbse.jsx';  
-import Carrer from './pages/Careers.jsx';
-import DirectorPage from './pages/DirectorPage.jsx';
-import AdmissionProcedure from './pages/AddmissionProcedure.jsx';
-import TopperPage from './pages/TopperPage.jsx';
-import AchieversPage from './pages/AchieversPage.jsx';
-import RegistrationForm from './pages/RegistrationForm.jsx';
+import SchoolTiming from "./pages/SchoolTiming.jsx";
+import FAQ from "./pages/FAQ.jsx";
+import Cbse from "./pages/Cbse.jsx";
+import Carrer from "./pages/Careers.jsx";
+import DirectorPage from "./pages/DirectorPage.jsx";
+import AdmissionProcedure from "./pages/AddmissionProcedure.jsx";
+import TopperPage from "./pages/TopperPage.jsx";
+import AchieversPage from "./pages/AchieversPage.jsx";
+import RegistrationForm from "./pages/RegistrationForm.jsx";
+import TopAlumni from "./pages/TopAlumni.jsx";
 
-const HomePage = React.lazy(() => import('./pages/HomePage.jsx'));
-const Error = React.lazy(() => import('./components/Error.jsx'));
-const ContactPage = React.lazy(() => import('./pages/ContactPage.jsx'));
-const AboutPage = React.lazy(() => import('./pages/AboutUs.jsx'));
-const InfrastructurePage = React.lazy(() => import('./pages/Infrastructure.jsx'));
-const LabsPage = React.lazy(() => import('./pages/LabsPage.jsx'));
-const FeesStructurePage = React.lazy(() => import('./pages/FeesStructure.jsx'));
-const TransportPage = React.lazy(() => import('./pages/TransportPage.jsx'));
-const ActivityCalender = React.lazy(() => import('./pages/ActivityCalender.jsx'));
-const FacultyDetails = React.lazy(() => import('./pages/FacultyDetails.jsx'));
+const HomePage = React.lazy(() => import("./pages/HomePage.jsx"));
+const Error = React.lazy(() => import("./components/Error.jsx"));
+const ContactPage = React.lazy(() => import("./pages/ContactPage.jsx"));
+const AboutPage = React.lazy(() => import("./pages/AboutUs.jsx"));
+const InfrastructurePage = React.lazy(() =>
+  import("./pages/Infrastructure.jsx")
+);
+const LabsPage = React.lazy(() => import("./pages/LabsPage.jsx"));
+const FeesStructurePage = React.lazy(() => import("./pages/FeesStructure.jsx"));
+const TransportPage = React.lazy(() => import("./pages/TransportPage.jsx"));
+const ActivityCalender = React.lazy(() =>
+  import("./pages/ActivityCalender.jsx")
+);
+const FacultyDetails = React.lazy(() => import("./pages/FacultyDetails.jsx"));
 
 const router = createBrowserRouter([
   {
@@ -83,8 +88,8 @@ const router = createBrowserRouter([
         element: <Carrer />,
       },
       {
-        path:"/directors-desk",
-        element: <DirectorPage />
+        path: "/directors-desk",
+        element: <DirectorPage />,
       },
       {
         path: "/admission-guidelines",
@@ -95,13 +100,17 @@ const router = createBrowserRouter([
         element: <TopperPage />,
       },
       {
-        path:"/achievers",
-        element:<AchieversPage />
+        path: "/alumni",
+        element: <TopAlumni />,
       },
       {
-        path:"/online-registration",
-        element:<RegistrationForm />
-      }
+        path: "/achievers",
+        element: <AchieversPage />,
+      },
+      {
+        path: "/online-registration",
+        element: <RegistrationForm />,
+      },
     ],
   },
 ]);

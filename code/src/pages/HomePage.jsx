@@ -63,7 +63,7 @@ const HomePage = () => {
           >
             Indian Olympiad School
           </motion.h1>
-          <span className="text-white -translate-y-1/2 text-[22px] md:text-3xl text-shadow-[0px_4px_10px] text-shadow-black mb-2 font-normal ">
+          <span className="text-white -translate-y-1/2 text-[18px] md:text-3xl text-shadow-[0px_4px_10px] text-shadow-black mb-2 font-normal ">
             We Enter to Learn Leave to Achieve
           </span>
           <div>

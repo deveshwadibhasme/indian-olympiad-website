@@ -30,12 +30,34 @@ const RegistrationForm = () => {
   }, []);
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData.entries());
-        console.log(data);
-        alert("This Form is being inactive for some period of time.");
-        e.target.reset();
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+    
+      const backendUrl = false
+        ? 'http://localhost:3000/api/send-form' // Local development URL
+        : 'https://ios-server-azlc.onrender.com/api/send-form'; // Production URL
+
+      fetch(backendUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(result => {
+        if(result.ok){
+          alert("Form submitted successfully!");
+          e.target.reset();
+        }
+        else{
+          throw new Error('Error submitting form');
+        }
+      })
+      .catch(error => {
+        console.error('Error submitting form:', error);
+        alert("There was an error submitting the form. Please try again later.");
+      });
     }
 
 
@@ -81,7 +103,7 @@ const RegistrationForm = () => {
               <input
                 type="text"
                 id="fatherName"
-                name="fatherName"
+                name="father"
                 className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter father's full name"
                 required
@@ -167,6 +189,7 @@ const RegistrationForm = () => {
               id="address"
               name="address"
               rows="4"
+              spellCheck="false"
               className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your full address"
               required
@@ -202,7 +225,6 @@ const RegistrationForm = () => {
                 name="email"
                 className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter email address"
-                required
               />
             </div>
           </div>

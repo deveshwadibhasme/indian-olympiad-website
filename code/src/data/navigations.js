@@ -62,7 +62,7 @@ export default [
     {
         title: 'Admissions',
         path: '#',
-        dropDown:[
+        dropDown: [
             // {
             //     title: 'Enquiry Form',
             //     path: '/enquiry-form'
@@ -80,10 +80,14 @@ export default [
     {
         title: 'Achievements',
         path: '#',
-        dropDown:[
+        dropDown: [
             {
-                title: 'School Toppers and Alumni',
+                title: 'School Toppers',
                 path: '/toppers'
+            },
+            {
+                title: 'Our Alumni',
+                path: '/alumni'
             },
             {
                 title: `School Achievers`,
@@ -96,15 +100,15 @@ export default [
         ]
     },
     {
-        title:'CBSE Info',
+        title: 'CBSE Info',
         path: '/cbse',
     },
     {
-        title:'Careers',
+        title: 'Careers',
         path: '/careers',
     },
     {
-        title:'Contact Us',
+        title: 'Contact Us',
         path: '/contact-us',
     },
 ]
