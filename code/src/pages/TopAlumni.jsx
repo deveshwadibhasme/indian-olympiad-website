@@ -59,68 +59,70 @@ const TopAlumni = () => {
           </select>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {filteredAlumni.map((person, index) => (
             <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               key={index}
-              initial={{ opacity: 0.7, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-3 md:p-5 flex flex-col items-center text-center border-b-2 border-t-2 w-[80%] md:w-full mx-auto
-              border-violet-500"
+              className="group relative text-center rounded-xl flex flex-col items-center h-80 justify-center overflow-hidden cursor-pointer transition-all duration-300 ease-in-out transform hover:shadow-2xl perspective-normal bg-transparent"
             >
-              <div className="w-30 h-30 bg-blue-500 rounded-xl mb-2 md:mb-1 flex items-center justify-center overflow-hidden border-2 border-blue-100">
+              <div className="relative w-full backface-hidden group-hover:-rotate-y-180 transform-3d transition-transform duration-500 origin-center h-full rotate-y-0 ease-in-out">
                 {person.image ? (
                   <img
                     src={getImageLink(person.image)}
+                    onError={(e) => {
+                      e.target.src = getImageLink(
+                        "/assets-images/faculty-images/profile-icon.jpg"
+                      );
+                    }}
                     alt={person.name}
-                    className="w-full h-full object-cover  text-blue-500"
+                    className="w-full absolute h-full object-cover rounded-xl"
                   />
                 ) : (
-                  <span className="text-2xl font-bold text-blue-300">
-                    {person.name.charAt(0)}
-                  </span>
+                  <div className="w-full absolute h-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center rounded-xl">
+                    <img
+                      src={getImageLink(
+                        "/assets-images/faculty-images/profile-icon.jpg"
+                      )}
+                      alt={person.name}
+                      className="w-full absolute h-full object-cover rounded-xl"
+                    />
+                  </div>
                 )}
+                <div className="absolute bottom-0 right-0 w-full bg-gradient-to-t from-blue-950 to-transparent p-4">
+                  <h2 className="text-xl font-bold text-white">
+                    {person.name}
+                  </h2>
+                </div>
               </div>
 
-              <div className="mt-2 md:mt-2">
-                <h2 className="text-lg font-bold text-gray-800 leading-tight">
-                  {person.name}
-                </h2>
-                {person.organization && (
-                  <p className="mt-2 text-xs py-1 px-1 md:px-3 bg-blue-200 rounded-2xl text-gray-600 font-medium italic line-clamp-1">
-                    {person.organization}
-                  </p>
-                )}
-                <span className="text-[10px] md:text-xs font-medium text-blue-500">
-                  {person.startYear || "?"} - {person.endYear || "Present"}
-                </span>
-              </div>
-
-              {person.role && (
-                <p className="text-xs md:text-sm text-blue-900 font-bold line-clamp-2 min-h-[1.2rem] md:min-h-[1.5rem]">
-                  {person.role}
+              <motion.div className="absolute bg-white rounded-xl shadow-2xl inset-0 flex flex-col items-center justify-center p-6 backface-hidden rotate-y-180 group-hover:-rotate-y-0 transform-3d transition-transform duration-500 origin-center">
+                <p className="text-gray-800 text-lg font-bold mb-1">
+                  {person.role || "Alumni"}
                 </p>
-              )}
-
-              <div className="mt-auto pt-2 md:pt-4">
+                <p className="text-indigo-600 font-semibold text-sm mb-2">
+                  {person.organization}
+                </p>
+                <p className="text-gray-500 text-sm mb-3">
+                  Batch {person.batch} ({person.startYear || "?"} -{" "}
+                  {person.endYear || "Present"})
+                </p>
                 {person.type && (
                   <span
-                    className={`text-[8px] md:text-[10px] px-2 md:px-3 py-0.5 md:py-1 rounded-full font-bold uppercase tracking-wider ${
+                    className={`text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-wider ${
                       person.type === "Job"
                         ? "bg-green-100 text-green-700"
                         : person.type === "Business"
                         ? "bg-purple-100 text-purple-700"
-                        : person.type === "Course"
-                        ? "bg-orange-100 text-orange-700"
-                        : "bg-gray-100 text-gray-700"
+                        : "bg-orange-100 text-orange-700"
                     }`}
                   >
                     {person.type}
                   </span>
                 )}
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
